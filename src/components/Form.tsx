@@ -32,7 +32,7 @@ export default function Form() {
 
     // TODO Enviar formulario
 
-    await SendEmail();
+    await SendEmail(field.email, field.message);
 
     setField({
       email: "",

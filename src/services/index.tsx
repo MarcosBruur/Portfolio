@@ -1,14 +1,14 @@
-export const sendEmail = async () => {
+export const sendEmail = async (email: string, message: string) => {
   const res = await fetch("/.netlify/functions/sendEmail", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      to: "marcosbruur@gmail.com",
-      subject: "Hola desde Netlify",
-      html: "<p>Email enviado desde Netlify + React 🎉</p>",
+      to: email,
+      subject: "Mensaje desde el formulario de contacto",
+      html: `<p>${message}</p>`,
     }),
   });
 
   const data = await res.json();
-  console.log(data);
+  return data;
 };
