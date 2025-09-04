@@ -4,7 +4,7 @@ export const sendEmail = async (email: string, message: string) => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       to: email,
-      subject: "Mensaje desde el formulario de contacto",
+      subject: "Mensaje desde tu Portfolio",
       html: `<p>${message}</p>`,
     }),
   });
