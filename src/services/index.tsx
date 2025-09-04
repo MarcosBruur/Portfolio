@@ -1,14 +1,14 @@
-import { Resend } from "resend";
-
 export const sendEmail = async () => {
-  const resend = new Resend("aqui va mi api key pero tu no vas verla jej");
-
-  const send = await resend.emails.send({
-    from: "onboarding@resend.dev",
-    to: "marcosbruur@gmail.com",
-    subject: "Hello World",
-    html: "<p>Congrats on sending your <strong>first email</strong>!</p>",
+  const res = await fetch("/.netlify/functions/sendEmail", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      to: "marcosbruur@gmail.com",
+      subject: "Hola desde Netlify",
+      html: "<p>Email enviado desde Netlify + React 🎉</p>",
+    }),
   });
 
-  console.log(send);
+  const data = await res.json();
+  console.log(data);
 };
