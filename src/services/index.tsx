@@ -3,8 +3,8 @@ export const sendEmail = async (email: string, message: string) => {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      to: email,
-      subject: "Mensaje desde tu Portfolio",
+      to: "marcosbruur@gmail.com",
+      subject: `Mensaje de ${email}`,
       html: `<p>${message}</p>`,
     }),
   });

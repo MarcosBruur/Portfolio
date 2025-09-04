@@ -6,7 +6,8 @@ exports.handler = async (event) => {
     const { to, subject, html } = JSON.parse(event.body);
 
     const data = await resend.emails.send({
-      from: to,
+      from: "onboarding@resend.dev",
+      to,
       subject,
       html,
     });
