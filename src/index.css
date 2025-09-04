@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+body {
+  background-color: #101722;
+  color: white;
+  font-family: "Outfit", sans-serif;
+}
+
+@keyframes scroll-infinite {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Backend */
+.animate-scroll-backend {
+  animation: scroll-infinite 10s linear infinite;
+}
+
+/* Frontend más rápido */
+.animate-scroll-frontend {
+  animation: scroll-infinite 8s linear infinite; /* más rápido */
+}
