@@ -20,7 +20,7 @@ export default function HomePage() {
         </h2>
         <div className="grid grid-cols-6 grid-rows-3 mt-10 gap-10">
           {services.map((service) => (
-            <ServiceDetail service={service} />
+            <ServiceDetail key={service.id} service={service} />
           ))}
         </div>
       </div>
