@@ -19,7 +19,7 @@ export default function Notification({
         ...notification,
         show: false,
       });
-    }, 5000);
+    }, 8000);
   }, [notification]);
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
