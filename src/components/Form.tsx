@@ -42,7 +42,7 @@ export default function Form() {
       email: "",
       message: "",
     });
-    setAlert("");
+    setAlert("Envio exitoso.Cambiar esta notificacion");
   };
 
   return (

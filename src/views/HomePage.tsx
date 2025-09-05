@@ -25,11 +25,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <img
-        src="/marcos.png"
-        alt="Imagen marcos"
-        className="rounded-full  shadow w-2xl"
-      />
+      <img src="/foto.png" alt="Imagen marcos" className="shadow w-3xl" />
     </>
   );
 }
