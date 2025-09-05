@@ -1,23 +1,33 @@
 import { Fragment, useMemo } from "react";
-import { CheckCircleIcon } from "@heroicons/react/24/outline";
+import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/24/outline";
 import { XMarkIcon } from "@heroicons/react/20/solid";
 import { Transition } from "@headlessui/react";
+import type { NotificationType } from "../types";
 
 type NotificationProps = {
-  show: boolean;
-  setShow: React.Dispatch<React.SetStateAction<boolean>>;
+  notification: NotificationType;
+  setNotification: React.Dispatch<React.SetStateAction<NotificationType>>;
 };
 
-export default function Notification({ show, setShow }: NotificationProps) {
+export default function Notification({
+  notification,
+  setNotification,
+}: NotificationProps) {
   useMemo(() => {
     setTimeout(() => {
-      setShow(false);
+      setNotification({
+        ...notification,
+        show: false,
+      });
     }, 5000);
-  }, [show]);
+  }, [notification]);
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
-    setShow(false);
+    setNotification({
+      ...notification,
+      show: false,
+    });
   };
 
   return (
@@ -27,7 +37,7 @@ export default function Notification({ show, setShow }: NotificationProps) {
     >
       <div className="flex w-full flex-col items-center space-y-4 sm:items-end">
         <Transition
-          show={show}
+          show={notification.show}
           as={Fragment}
           enter="transform ease-out duration-300 transition"
           enterFrom="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
@@ -40,11 +50,15 @@ export default function Notification({ show, setShow }: NotificationProps) {
             <div className="p-4">
               <div className="flex justify-around items-center">
                 <div className="flex-shrink-0">
-                  <CheckCircleIcon className="size-10 text-green-600" />
+                  {notification.isError ? (
+                    <XCircleIcon className="size-10 text-red-600" />
+                  ) : (
+                    <CheckCircleIcon className="size-10 text-green-600" />
+                  )}
                 </div>
                 <div className="ml-3 w-0 flex-1 pt-0.5">
                   <p className="text-sm font-black text-gray-900 ">
-                    Email enviado exitosamente
+                    {notification.message}
                   </p>
                   <p className="mt-1 text-sm text-gray-500"></p>
                 </div>

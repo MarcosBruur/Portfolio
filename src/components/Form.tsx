@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { FieldType } from "../types";
+import type { FieldType, NotificationType } from "../types";
 import { sendEmail } from "../services";
 import Notification from "./Notification";
 
@@ -9,7 +9,12 @@ export default function Form() {
     email: "",
     message: "",
   });
-  const [show, setShow] = useState(false);
+
+  const [notification, setNotification] = useState<NotificationType>({
+    show: false,
+    isError: false,
+    message: "",
+  });
 
   const SendEmail = sendEmail;
 
@@ -39,13 +44,26 @@ export default function Form() {
     }
 
     const resp = await SendEmail(field.email, field.message);
-    console.log(resp);
 
     setField({
       email: "",
       message: "",
     });
-    setShow(true);
+
+    if (!resp.success) {
+      setNotification({
+        show: true,
+        isError: true,
+        message: "Error inesperado, vuelve a intentar más tarde :c ",
+      });
+      return;
+    }
+
+    setNotification({
+      show: true,
+      isError: false,
+      message: "Email enviado exitosamente",
+    });
   };
 
   return (
@@ -95,7 +113,10 @@ export default function Form() {
           className="text-center text-xl p-2 mt-6 bg-blue-700 w-full hover:bg-blue-800 uppercase font-bold shadow-lg hover:cursor-pointer"
         />
       </form>
-      <Notification show={show} setShow={setShow} />
+      <Notification
+        notification={notification}
+        setNotification={setNotification}
+      />
     </div>
   );
 }

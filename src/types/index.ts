@@ -23,3 +23,9 @@ export type FieldType = {
   email: string;
   message: string;
 };
+
+export type NotificationType = {
+  show: boolean;
+  isError: boolean;
+  message: string;
+};
