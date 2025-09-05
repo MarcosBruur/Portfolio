@@ -46,12 +46,12 @@ export default function Form() {
   };
 
   return (
-    <div className="inline-block px-5 py-10 lg:rounded-lg shadow border-y-3 lg:border-2 border-gray-400 w-full">
+    <div className="inline-block px-5 py-10 lg:rounded-lg shadow-lg shadow-blue-500 border-y-3 lg:border-2 border-indigo-600 w-full lg:w-3/4">
       <form action="" onSubmit={handleSubmit}>
         <div className="mb-5 flex flex-col lg:grid lg:grid-cols-4 lg:items-center gap-4">
           <label
             htmlFor="email"
-            className="text-2xl font-black col-span-1 underline text-blue-300"
+            className="text-2xl xl:text-4xl  font-black col-span-1 underline text-blue-300"
           >
             Email
           </label>
@@ -60,7 +60,7 @@ export default function Form() {
             name="email"
             id="email"
             placeholder="email@gmail.com"
-            className="w-full border-2 text-center  border-white p-2 rounded-lg lg:col-span-3 text-lg"
+            className="w-full border-2 text-center  border-white p-2 rounded-lg lg:col-span-3 text-lg xl:text-2xl"
             onChange={handleChange}
             value={field.email}
           />
@@ -68,7 +68,7 @@ export default function Form() {
         <div className="flex flex-col lg:grid lg:grid-cols-4 lg:items-start gap-4">
           <label
             htmlFor="message"
-            className="text-2xl font-black col-span-1 underline text-blue-300"
+            className="text-2xl xl:text-4xl font-black col-span-1 underline text-blue-300"
           >
             Mensaje
           </label>
@@ -76,7 +76,7 @@ export default function Form() {
             name="message"
             id="message"
             placeholder="Deja tu mensaje aquí"
-            className="border-2 text-center border-white p-2 rounded-lg col-span-3 h-45 text-lg"
+            className="border-2 text-center border-white p-2 rounded-lg col-span-3 h-45 text-lg xl:text-2xl"
             onChange={handleChange}
             value={field.message}
           />

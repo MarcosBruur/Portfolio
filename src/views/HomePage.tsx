@@ -28,7 +28,7 @@ export default function HomePage() {
             Mis servicios
           </h2>
 
-          <div className="lg:grid lg:grid-cols-6 lg:grid-rows-3 lg:gap-10 mt-10">
+          <div className="lg:grid lg:grid-cols-6 lg:grid-rows-3 lg:gap-10 mt-10 mb-5">
             {services.map((service) => (
               <ServiceDetail key={service.id} service={service} />
             ))}
@@ -47,7 +47,7 @@ export default function HomePage() {
                 href="https://github.com/MarcosBruur"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:scale-120 "
+                className="hover:scale-120"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

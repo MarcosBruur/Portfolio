@@ -6,11 +6,12 @@ export default function ContactPage() {
       <div className="container flex flex-col items-center justify-center mt-5">
         <Form />
         <h1 className="text-5xl mt-10 font-bold text-indigo-600">Mis Redes</h1>
-        <div className="flex justify-around gap-5 mt-5 px-8 py-3 bg-white rounded mb-5">
+        <div className="flex justify-around xl:w-1/4 gap-5 mt-5 px-8 py-3 bg-white rounded mb-5">
           <a
             href="https://github.com/MarcosBruur"
             target="_blank"
             rel="noopener noreferrer"
+            className="hover:scale-120"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -27,6 +28,7 @@ export default function ContactPage() {
             href="https://www.linkedin.com/in/marcos-alexis-bruno-urquiza-71202826b/"
             target="_blank"
             rel="noopener noreferrer"
+            className="hover:scale-120"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -43,6 +45,7 @@ export default function ContactPage() {
             href="https://www.instagram.com/marcos_bruno_ur/"
             target="_blank"
             rel="noopener noreferrer"
+            className="hover:scale-120"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

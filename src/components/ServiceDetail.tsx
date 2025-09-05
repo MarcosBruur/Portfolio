@@ -9,7 +9,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
   return (
     <>
       <div
-        className={`container border-y-2 mb-2 lg:border-2 border-gray-300 lg:rounded-4xl p-4 
+        className={`container border-y-2 mb-10 lg:mb-5 lg:border-2  border-indigo-600 lg:rounded-4xl p-4 shadow-lg lg:shadow-xl shadow-blue-500
                       ${service.id === 1 ? "col-span-3" : ""}
                       ${
                         service.id === 2
