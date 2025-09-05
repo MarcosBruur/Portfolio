@@ -6,7 +6,7 @@ export default function ContactPage() {
       <div className="container flex flex-col items-center justify-center mt-5">
         <Form />
         <h1 className="text-5xl mt-10 font-bold text-indigo-600">Mis Redes</h1>
-        <div className="flex justify-around gap-5 mt-5 px-8 py-3 bg-white rounded ">
+        <div className="flex justify-around gap-5 mt-5 px-8 py-3 bg-white rounded mb-5">
           <a
             href="https://github.com/MarcosBruur"
             target="_blank"

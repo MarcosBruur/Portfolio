@@ -46,9 +46,9 @@ export default function Form() {
   };
 
   return (
-    <div className="inline-block px-5 py-10 rounded-lg shadow border-2 border-white w-3xl">
+    <div className="inline-block px-5 py-10 lg:rounded-lg shadow border-y-3 lg:border-2 border-gray-400 w-full">
       <form action="" onSubmit={handleSubmit}>
-        <div className="mb-5 grid grid-cols-4 items-center gap-4">
+        <div className="mb-5 flex flex-col lg:grid lg:grid-cols-4 lg:items-center gap-4">
           <label
             htmlFor="email"
             className="text-2xl font-black col-span-1 underline text-blue-300"
@@ -60,14 +60,14 @@ export default function Form() {
             name="email"
             id="email"
             placeholder="email@gmail.com"
-            className="border-2 border-white p-2 rounded-lg col-span-3 text-lg"
+            className="w-full border-2 text-center  border-white p-2 rounded-lg lg:col-span-3 text-lg"
             onChange={handleChange}
             value={field.email}
           />
         </div>
-        <div className="grid grid-cols-4 items-start gap-4">
+        <div className="flex flex-col lg:grid lg:grid-cols-4 lg:items-start gap-4">
           <label
-            htmlFor="email"
+            htmlFor="message"
             className="text-2xl font-black col-span-1 underline text-blue-300"
           >
             Mensaje
@@ -75,8 +75,8 @@ export default function Form() {
           <textarea
             name="message"
             id="message"
-            placeholder="Deja tu mensaje "
-            className="border-2 border-white p-2 rounded-lg col-span-3 h-45 text-lg"
+            placeholder="Deja tu mensaje aquí"
+            className="border-2 text-center border-white p-2 rounded-lg col-span-3 h-45 text-lg"
             onChange={handleChange}
             value={field.message}
           />

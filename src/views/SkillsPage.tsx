@@ -8,7 +8,7 @@ export default function SkillsPage() {
           Mis Skills
         </h1>
 
-        <div className="flex items-center gap-10 mb-20">
+        <div className=" lg:flex items-center gap-10 mb-20">
           <h2 className="text-2xl mb-4">Backend</h2>
 
           <div className="overflow-hidden w-full max-w-2xl bg-white p-5 rounded-lg">
@@ -30,7 +30,7 @@ export default function SkillsPage() {
           </div>
         </div>
 
-        <div className="flex items-center gap-10">
+        <div className="lg:flex items-center gap-10 mb-15">
           <h2 className="text-2xl mb-4 whitespace-nowrap rounded-lg">
             Frontend
           </h2>

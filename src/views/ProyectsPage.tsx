@@ -9,7 +9,7 @@ export default function ProyectsPage() {
           Algunos Proyectos Personales
         </h1>
 
-        <div className="mt-20 grid grid-cols-2 gap-10">
+        <div className="mt-20 lg:grid lg:grid-cols-2 lg:gap-10">
           {projects.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}
