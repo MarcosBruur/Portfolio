@@ -17,15 +17,14 @@ export default function HomePage() {
           />
 
           <p className="text-lg">
-            Mi nombre es Marcos, desarrollador fullstack apasionado con la
-            tecnología. Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Itaque magnam maiores laboriosam quo commodi fugiat?
-            Consequatur a, hic molestiae pariatur officiis et repudiandae velit
-            facilis quia, facere numquam tempore assumenda!
+            Mi nombre es Marcos, tengo 23 años y soy una apasionado de la
+            tecnologia. Tengo experiencia como programador web FullStack, más
+            centrado en back aunque ultimamente me me interesan aprender
+            conceptos front, como puedes ver en la mayoria de mis proyectos ^_^
           </p>
 
           <h2 className="text-5xl mt-20 font-bold mb-5 text-indigo-600 text-center">
-            Mis servicios
+            Mis Habilidades
           </h2>
 
           <div className="lg:grid lg:grid-cols-6 lg:grid-rows-3 lg:gap-10 mt-10 mb-5">

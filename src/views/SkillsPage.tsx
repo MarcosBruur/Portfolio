@@ -3,9 +3,9 @@ import { logos } from "../data";
 export default function SkillsPage() {
   return (
     <>
-      <div className="container flex flex-col items-center">
+      <div className="container flex flex-col items-center ">
         <h1 className="text-5xl font-bold text-indigo-600 text-center mb-30">
-          Mis Skills
+          Tecnologías
         </h1>
 
         <div className=" lg:flex items-center gap-10 mb-20">

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { FieldType } from "../types";
 import { sendEmail } from "../services";
+import Notification from "./Notification";
 
 export default function Form() {
   const [alert, setAlert] = useState("");
@@ -8,6 +9,7 @@ export default function Form() {
     email: "",
     message: "",
   });
+  const [show, setShow] = useState(false);
 
   const SendEmail = sendEmail;
 
@@ -36,13 +38,14 @@ export default function Form() {
       return;
     }
 
-    await SendEmail(field.email, field.message);
+    const resp = await SendEmail(field.email, field.message);
+    console.log(resp);
 
     setField({
       email: "",
       message: "",
     });
-    setAlert("Envio exitoso.Cambiar esta notificacion");
+    setShow(true);
   };
 
   return (
@@ -51,7 +54,7 @@ export default function Form() {
         <div className="mb-5 flex flex-col lg:grid lg:grid-cols-4 lg:items-center gap-4">
           <label
             htmlFor="email"
-            className="text-2xl xl:text-4xl  font-black col-span-1 underline text-blue-300"
+            className="text-2xl xl:text-4xl  font-black col-span-1 underline"
           >
             Email
           </label>
@@ -68,7 +71,7 @@ export default function Form() {
         <div className="flex flex-col lg:grid lg:grid-cols-4 lg:items-start gap-4">
           <label
             htmlFor="message"
-            className="text-2xl xl:text-4xl font-black col-span-1 underline text-blue-300"
+            className="text-2xl xl:text-4xl font-black col-span-1 underline "
           >
             Mensaje
           </label>
@@ -92,6 +95,7 @@ export default function Form() {
           className="text-center text-xl p-2 mt-6 bg-blue-700 w-full hover:bg-blue-800 uppercase font-bold shadow-lg hover:cursor-pointer"
         />
       </form>
+      <Notification show={show} setShow={setShow} />
     </div>
   );
 }

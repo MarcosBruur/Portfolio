@@ -11,13 +11,12 @@ export default function Header() {
             </p>
           </div>
 
-          {/* Navegación */}
           <nav className="flex flex-col lg:flex-row text-center w-full lg:w-auto items-center lg:gap-8">
             <NavLink
               to="/"
               className={({ isActive }) =>
                 isActive
-                  ? "bg-blue-300 w-full lg:w-auto lg:bg-transparent lg:text-blue-300 uppercase font-bold text-lg mb"
+                  ? "bg-indigo-700 w-full lg:w-auto lg:bg-transparent lg:text-blue-300 uppercase font-bold text-lg mb"
                   : "uppercase font-bold text-lg w-full lg:w-auto"
               }
             >
@@ -28,17 +27,17 @@ export default function Header() {
               to="/skills"
               className={({ isActive }) =>
                 isActive
-                  ? "bg-blue-300 w-full lg:w-auto lg:bg-transparent lg:text-blue-300 uppercase font-bold text-lg"
+                  ? "bg-indigo-700 w-full lg:w-auto lg:bg-transparent lg:text-blue-300 uppercase font-bold text-lg"
                   : "text-white uppercase font-bold text-lg w-full lg:w-auto"
               }
             >
-              Skills
+              Tec
             </NavLink>
             <NavLink
               to="/projects"
               className={({ isActive }) =>
                 isActive
-                  ? "bg-blue-300 w-full lg:w-auto lg:bg-transparent lg:text-blue-300 uppercase font-bold text-lg"
+                  ? "bg-indigo-700 w-full lg:w-auto lg:bg-transparent lg:text-blue-300 uppercase font-bold text-lg"
                   : "text-white uppercase font-bold text-lg w-full lg:w-auto"
               }
             >
@@ -48,7 +47,7 @@ export default function Header() {
               to="/contact"
               className={({ isActive }) =>
                 isActive
-                  ? "bg-blue-300 w-full lg:w-auto lg:bg-transparent lg:text-blue-300 uppercase font-bold text-lg"
+                  ? "bg-indigo-700 w-full lg:w-auto lg:bg-transparent lg:text-blue-300 uppercase font-bold text-lg"
                   : "text-white uppercase font-bold text-lg w-full lg:w-auto"
               }
             >

@@ -10,19 +10,19 @@ export const services: ServiceType[] = [
     id: 1,
     icon: GlobeAltIcon,
     title: "Diseño Web",
-    text: "hic molestiae pariatur officiis et repudiandae velit facilis quia hic molestiae pariatur officiis et repudiandae velit facilis quia",
+    text: "Experiencia diseñando desde cero, creando y adaptando aplicaciones web completas 100% responsive",
   },
   {
     id: 2,
     icon: CircleStackIcon,
     title: "Desarrollo Backend",
-    text: "hic molestiae pariatur officiis et repudiandae velit facilis quia hic molestiae pariatur officiis et repudiandae velit facilis quia",
+    text: "Creación y manejo de entornos virtuales, Api Rest, Graphql, contenedores Docker, manejo de SQL/NoSQL y scripts",
   },
   {
     id: 3,
     icon: ComputerDesktopIcon,
     title: "Desarrollo FullStack",
-    text: "hic molestiae pariatur officiis et repudiandae velit facilis quia hic molestiae pariatur officiis et repudiandae velit facilis quia",
+    text: "Integracion completa entre Backend y Frontend, Creacion y consumo de APIs",
   },
 ];
 
@@ -35,43 +35,43 @@ export const projects: ProjectType[] = [
   {
     img: "/proyectos/bienesraices",
     title: "BienesRaices",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate Lorem ipsum dolor, sit amet consectetur adipisicing elit. VoluptateLorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate",
+    desc: "Un sitio web de compra de propiedades, tecnologias empleadas: PHP, HTML,SCSS,JS",
     url: "https://blogcafe-marcos.netlify.app/",
   },
   {
     img: "/proyectos/blogcafe",
     title: "Blog del café",
-    desc: " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate Lorem ipsum dolor, sit amet consectetur adipisicing elit. VoluptateLorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate",
+    desc: "Un blog simple centrado en el diseño, Tecnologias empleadas: HTML,SCSS,JS",
     url: "https://blogcafe-marcos.netlify.app/",
   },
   {
     img: "/proyectos/buscadorbebidas",
     title: "Buscador de Bebidas",
-    desc: " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate Lorem ipsum dolor, sit amet consectetur adipisicing elit. VoluptateLorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate",
+    desc: "App que permite buscar recetas de cualquier tipo de bebida, con apartado de buscar con IA incluid. Tecnologias empleadas: React,Ts,Tailwind",
     url: "https://mbubebidas.netlify.app/",
   },
   {
     img: "/proyectos/contadorcalorias",
     title: "Contador de calorias",
-    desc: " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate Lorem ipsum dolor, sit amet consectetur adipisicing elit. VoluptateLorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate",
+    desc: "Una app que permite administrar las calorias gastadas en un dia, proximamente se agregará IA. Tecnologias empleadas: React,Ts",
     url: "https://mbrucalories.netlify.app/",
   },
   {
     img: "/proyectos/cotizador",
     title: "Cotizador de Cryptomonedas",
-    desc: " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate Lorem ipsum dolor, sit amet consectetur adipisicing elit. VoluptateLorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate",
+    desc: "Web que permite visualizar en tiempo real el valor de mercado de las criptomonedas más importantes. Tecnologias empleadas: React,Ts,Tailwind",
     url: "https://mbucotizador.netlify.app/",
   },
   {
     img: "/proyectos/guitarla",
     title: "Carrito de compra",
-    desc: " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate Lorem ipsum dolor, sit amet consectetur adipisicing elit. VoluptateLorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate",
+    desc: "Web simple que implementa un carrito de compras. Tecnologias empleadas: React,Ts",
     url: "https://mbuguitar.netlify.app/",
   },
   {
     img: "/proyectos/planificadorgastos",
     title: "Planificador de gastos",
-    desc: " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate Lorem ipsum dolor, sit amet consectetur adipisicing elit. VoluptateLorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate",
+    desc: "App para planificar gastos a traves de un monto. Tecnologias empleadas: React,Ts,Tailwind",
     url: "https://mbuplanificadorgastos.netlify.app/",
   },
 ];

@@ -12,7 +12,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <img
             src={`${project.img}.png`}
             alt={`Imagen de ${project.title}`}
-            className="w-full h-full object-top-left rounded-lg  "
+            className="w-full h-full object-top-left rounded-lg scale-95 hover:scale-100 transition-transform duration-300 ease-in-out"
           />
         </div>
 
