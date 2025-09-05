@@ -30,7 +30,11 @@ export default function Form() {
       return;
     }
 
-    // TODO Enviar formulario
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(field.email)) {
+      setAlert("El email ingresado no es válido");
+      return;
+    }
 
     await SendEmail(field.email, field.message);
 
