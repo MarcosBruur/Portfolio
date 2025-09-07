@@ -33,12 +33,6 @@ export const logos: LogoType = {
 
 export const projects: ProjectType[] = [
   {
-    img: "/proyectos/bienesraices",
-    title: "BienesRaices",
-    desc: "Un sitio web de compra de propiedades, tecnologias empleadas: PHP, HTML,SCSS,JS",
-    url: "https://blogcafe-marcos.netlify.app/",
-  },
-  {
     img: "/proyectos/blogcafe",
     title: "Blog del café",
     desc: "Un blog simple centrado en el diseño, Tecnologias empleadas: HTML,SCSS,JS",
