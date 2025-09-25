@@ -33,10 +33,10 @@ export const logos: LogoType = {
 
 export const projects: ProjectType[] = [
   {
-    img: "/proyectos/blogcafe",
-    title: "Blog del café",
-    desc: "Un blog simple centrado en el diseño, Tecnologias empleadas: HTML,SCSS,JS",
-    url: "https://blogcafe-marcos.netlify.app/",
+    img: "/proyectos/administrador_productos",
+    title: "Administrador de Productos",
+    desc: "Aplicacion FullStack para administrar productos.Tecnologias empleadas: React,Ts,Tailwind,Express",
+    url: "https://product-manager-frontend-whax.vercel.app/",
   },
   {
     img: "/proyectos/buscadorbebidas",
@@ -69,9 +69,9 @@ export const projects: ProjectType[] = [
     url: "https://mbuplanificadorgastos.netlify.app/",
   },
   {
-    img: "/proyectos/administrador_productos",
-    title: "Administrador de Productos",
-    desc: "Aplicacion FullStack para administrar productos.Tecnologias empleadas: React,Ts,Tailwind,Express",
-    url: "https://product-manager-frontend-whax.vercel.app/",
+    img: "/proyectos/blogcafe",
+    title: "Blog del café",
+    desc: "Un blog simple centrado en el diseño, Tecnologias empleadas: HTML,SCSS,JS",
+    url: "https://blogcafe-marcos.netlify.app/",
   },
 ];
