@@ -68,4 +68,10 @@ export const projects: ProjectType[] = [
     desc: "App para planificar gastos a traves de un monto. Tecnologias empleadas: React,Ts,Tailwind",
     url: "https://mbuplanificadorgastos.netlify.app/",
   },
+  {
+    img: "/proyectos/administrador_productos",
+    title: "Administrador de Productos",
+    desc: "Aplicacion FullStack para administrar productos.Tecnologias empleadas: React,Ts,Tailwind,Express",
+    url: "https://product-manager-frontend-whax.vercel.app/",
+  },
 ];
