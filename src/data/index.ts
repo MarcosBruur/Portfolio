@@ -33,6 +33,12 @@ export const logos: LogoType = {
 
 export const projects: ProjectType[] = [
   {
+    img: "/proyectos/streetup.png",
+    title: "StreetUp",
+    desc: "Una red social de deportes callejeros.Tecnologias empleadas: React,Ts,Tailwind,Python,Django,MongoDB",
+    url: "https://marcos.alexis.ar/",
+  },
+  {
     img: "/proyectos/administrador_productos",
     title: "Administrador de Productos",
     desc: "Aplicacion FullStack para administrar productos.Tecnologias empleadas: React,Ts,Tailwind,Express",
