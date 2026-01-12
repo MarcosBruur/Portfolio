@@ -3,8 +3,8 @@ import { NavLink } from "react-router";
 export default function Header() {
   return (
     <>
-      <header className="lg:mt-10 lg:flex justify-center mb-5">
-        <div className="lg:border-gray-300 lg:w-2/3 lg:border-2 lg:p-5 lg:rounded-4xl flex flex-col lg:grid grid-cols-[33%_67%]">
+      <header className="sticky top-0 left-0 z-50 bg-linear-to-r from-indigo-950 via-indigo-700 to-indigo-950">
+        <div className="lg:border-b-gray-300 lg:border-b-2 lg:p-5 flex flex-col lg:grid grid-cols-[33%_67%]">
           <div>
             <p className="text-2xl font-light text-center lg:text-left">
               Marcos Bruno

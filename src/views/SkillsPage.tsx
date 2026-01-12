@@ -8,7 +8,7 @@ export default function SkillsPage() {
           Tecnologías
         </h1>
 
-        <div className=" lg:flex items-center gap-10 mb-20">
+        <div className="animate-fade-right animate-duration-2000  lg:flex items-center gap-10 mb-20">
           <h2 className="text-2xl mb-4">Backend</h2>
 
           <div className="overflow-hidden w-full max-w-2xl bg-white p-5 rounded-lg">
@@ -30,7 +30,7 @@ export default function SkillsPage() {
           </div>
         </div>
 
-        <div className="lg:flex items-center gap-10 mb-15">
+        <div className="animate-fade-left animate-duration-2000 lg:flex items-center gap-10 mb-15">
           <h2 className="text-2xl mb-4 whitespace-nowrap rounded-lg">
             Frontend
           </h2>
