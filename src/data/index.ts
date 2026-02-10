@@ -39,12 +39,6 @@ export const projects: ProjectType[] = [
     url: "https://marcos.alexis.ar/",
   },
   {
-    img: "/proyectos/administrador_productos",
-    title: "Administrador de Productos",
-    desc: "Aplicacion FullStack para administrar productos.Tecnologias empleadas: React,Ts,Tailwind,Express",
-    url: "https://product-manager-frontend-whax.vercel.app/",
-  },
-  {
     img: "/proyectos/buscadorbebidas",
     title: "Buscador de Bebidas",
     desc: "App que permite buscar recetas de cualquier tipo de bebida, con apartado de buscar con IA incluid. Tecnologias empleadas: React,Ts,Tailwind",
@@ -73,11 +67,5 @@ export const projects: ProjectType[] = [
     title: "Planificador de gastos",
     desc: "App para planificar gastos a traves de un monto. Tecnologias empleadas: React,Ts,Tailwind",
     url: "https://mbuplanificadorgastos.netlify.app/",
-  },
-  {
-    img: "/proyectos/blogcafe",
-    title: "Blog del café",
-    desc: "Un blog simple centrado en el diseño, Tecnologias empleadas: HTML,SCSS,JS",
-    url: "https://blogcafe-marcos.netlify.app/",
   },
 ];
