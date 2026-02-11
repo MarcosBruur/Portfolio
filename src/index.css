@@ -1,10 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap");
 @import "tailwindcss";
 @import "tailwindcss-animated";
+
+@theme {
+  --font-pixel: "Jacquard 24", system-ui;
+}
 
 body {
   background-color: #101722;
   color: white;
-  font-family: "Outfit", sans-serif;
 }
 
 @keyframes scroll-infinite {
