@@ -15,13 +15,12 @@ export default function Header() {
         backdrop-blur-md 
         shadow-lg"
       >
-        <div className="lg:p-5 flex justify-between">
+        <div className="lg:p-4 flex justify-between">
           <div className="border-2 border-cyan-400 p-4 rounded-full">
             <p className="text-cyan-400 text-3xl text-center lg:text-left font-pixel rotate-340">
               MB
             </p>
           </div>
-          <img src="coffepixel.avif" alt="" className="size-20" />
 
           <div className="flex justify-between items-center">
             <nav className="flex flex-col lg:mr-20 lg:flex-row text-center w-full lg:w-auto items-center lg:gap-8">
@@ -29,7 +28,7 @@ export default function Header() {
                 to="/"
                 className={({ isActive }) =>
                   isActive
-                    ? "bg-indigo-700 w-full lg:w-auto lg:bg-transparent lg:text-blue-300 uppercase font-bold text-lg mb"
+                    ? "bg-indigo-700 border-b-4 border-cyan-300 w-full lg:w-auto lg:bg-transparent lg:text-blue-300 uppercase font-bold text-lg "
                     : "uppercase font-bold text-lg w-full lg:w-auto"
                 }
               >
@@ -40,7 +39,7 @@ export default function Header() {
                 to="/skills"
                 className={({ isActive }) =>
                   isActive
-                    ? "bg-indigo-700 w-full lg:w-auto lg:bg-transparent lg:text-blue-300 uppercase font-bold text-lg"
+                    ? "bg-indigo-700 border-b-4 border-cyan-300 w-full lg:w-auto lg:bg-transparent lg:text-blue-300 uppercase font-bold text-lg"
                     : "text-white uppercase font-bold text-lg w-full lg:w-auto"
                 }
               >
@@ -50,7 +49,7 @@ export default function Header() {
                 to="/projects"
                 className={({ isActive }) =>
                   isActive
-                    ? "bg-indigo-700 w-full lg:w-auto lg:bg-transparent lg:text-blue-300 uppercase font-bold text-lg"
+                    ? "bg-indigo-700 border-b-4 border-cyan-300 w-full lg:w-auto lg:bg-transparent lg:text-blue-300 uppercase font-bold text-lg"
                     : "text-white uppercase font-bold text-lg w-full lg:w-auto"
                 }
               >
@@ -60,7 +59,7 @@ export default function Header() {
                 to="/contact"
                 className={({ isActive }) =>
                   isActive
-                    ? "bg-indigo-700 w-full lg:w-auto lg:bg-transparent lg:text-blue-300 uppercase font-bold text-lg"
+                    ? "bg-indigo-700 border-b-4 border-cyan-300 w-full lg:w-auto lg:bg-transparent lg:text-blue-300 uppercase font-bold text-lg"
                     : "text-white uppercase font-bold text-lg w-full lg:w-auto"
                 }
               >

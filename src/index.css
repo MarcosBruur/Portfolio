@@ -2,13 +2,32 @@
 @import "tailwindcss";
 @import "tailwindcss-animated";
 
-@theme {
-  --font-pixel: "Jacquard 24", system-ui;
-}
-
 body {
   background-color: #101722;
   color: white;
+
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #3a598c #101722;
+}
+
+/* Chrome / Edge / Safari */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0e121a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border: 2px solid #101722;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2a5cad;
 }
 
 @keyframes scroll-infinite {
@@ -20,6 +39,21 @@ body {
   }
 }
 
+@keyframes gradientMove {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+@theme {
+  --animate-gradient: gradientMove 5s linear infinite;
+  --font-pixel: "Jacquard 24", system-ui;
+  --bg-color: #101722;
+}
+
 /* Backend */
 .animate-scroll-backend {
   animation: scroll-infinite 10s linear infinite;
@@ -28,4 +62,18 @@ body {
 /* Frontend más rápido */
 .animate-scroll-frontend {
   animation: scroll-infinite 8s linear infinite; /* más rápido */
+}
+
+@keyframes grow-line {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.animate-grow-line {
+  transform-origin: top;
+  animation: grow-line 3s ease forwards;
 }
