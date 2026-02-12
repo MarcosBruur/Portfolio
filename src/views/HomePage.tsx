@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import ServiceDetail from "../components/ServiceDetail";
 import { services } from "../data";
+import { motion } from "framer-motion";
 export default function HomePage() {
   return (
     <>
@@ -31,10 +32,17 @@ export default function HomePage() {
 
           <h2 className="text-6xl">Desarrollador FullStack</h2>
 
-          <div className="animate-fade-right animate-duration-1500 text-start mt-30 rounded-xl bg-gradient-to-tr from-sky-950 via-sky-900 to-sky-950 p-12">
-            <div></div>
+          <motion.div
+            className="text-start mt-30 rounded-xl bg-gradient-to-tr from-sky-950 via-sky-900 to-sky-950 p-12"
+            initial={{ opacity: 0, x: -80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+            viewport={{ once: true, margin: "-100px" }}
+          >
             <div className="animate-fade-right animate-duration-1000 flex items-center gap-2">
-              <img src="coffe.png" alt="coffe" className="size-15" />
+              <div className="animate-wiggle-more animate-infinite">
+                <img src="coffe.png" alt="coffe" className="size-15" />
+              </div>
               <h3 className="text-4xl font-bold">
                 <span className="text-cyan-500 mr-1">#</span>
                 Sobre Mí
@@ -47,7 +55,10 @@ export default function HomePage() {
               habilidades constantemente para ofrecer soluciones eficientes y de
               calidad.
             </p>
-          </div>
+            <p className="text-lg text-gray-300">
+              Cantidad de cafés por día: de 2 a 3
+            </p>
+          </motion.div>
         </div>
 
         <div className="w-full flex justify-end">
@@ -133,12 +144,25 @@ export default function HomePage() {
 
       <div className="flex justify-between items-center">
         <div>
-          <h2 className="text-5xl mt-20 font-bold mb-5  text-center">
+          <h2 className="text-5xl mt-20 font-bold mb-5 text-center relative inline-block">
             Mis Habilidades
+            <motion.span
+              className="absolute left-0 bottom-[-8px] h-1 bg-cyan-500"
+              initial={{ width: 0 }}
+              whileInView={{ width: "100%" }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            />
           </h2>
 
           <div className="lg:grid lg:grid-cols-6 lg:grid-rows-3 lg:gap-10 mt-10 mb-5 relative">
-            <div className="bg-cyan-600 mb-10 w-2 col-start-4 row-start-1 row-end-4 -translate-x-22 z-0 animate-grow-line"></div>
+            <motion.div
+              className="bg-cyan-600 mb-10 w-2 col-start-4 row-start-1 row-end-4 -translate-x-22 z-0 origin-top"
+              initial={{ scaleY: 0 }}
+              whileInView={{ scaleY: 1 }}
+              transition={{ duration: 3 }}
+              viewport={{ once: true }}
+            />
 
             {services.map((service) => (
               <ServiceDetail key={service.id} service={service} />

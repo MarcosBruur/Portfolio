@@ -6,40 +6,68 @@ type ProjectCardProps = {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="flex flex-col border-y-2 lg:border-2 border-gray-200 lg:rounded-lg lg:p-4 mb-20 lg:mb-2">
-
+    <div className="flex flex-col lg:p-4 mb-20 lg:mb-2">
       {/* Imagen */}
-      <div className="w-full h-56 overflow-hidden flex items-center justify-center mb-3">
+      <div className="animate-fade-down animate-duration-1500 h-50 w-full overflow-hidden flex items-center justify-center mb-3">
         <img
           src={`${project.img}.png`}
           alt={`Imagen de ${project.title}`}
-          className="w-full h-full object-cover rounded-lg transition-transform duration-300 hover:scale-105"
+          className="size-full object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
         />
       </div>
 
       {/* Contenido */}
       <div className="flex flex-col flex-1">
-        <h2 className="text-blue-300 uppercase font-bold text-xl mb-2">
+        <h2 className="animate-fade-right animate-duration-1500 capitalize font-bold text-xl mb-2 text-start">
           {project.title}
         </h2>
 
-        <p className="text-sm mb-4">
-          {project.desc}
-        </p>
+        <p className="mb-4 text-start text-gray-400">{project.desc}</p>
 
-        <a
-          href={project.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-auto"
-        >
-          <button className="p-2 bg-blue-700 text-white w-full hover:bg-blue-800 uppercase font-bold shadow-lg">
-            Entrar
-          </button>
-        </a>
+        <div className="flex justify-around items-center">
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-auto"
+          >
+            <button
+              className="py-2 px-10 text-cyan-500 w-full uppercase rounded-xl 
+            font-bold shadow-lg border-2 border-cyan-500
+            hover:text-white
+            hover:shadow-[0px_0px_9px_3px_#13435e]
+            hover:bg-cyan-500
+            transition-all duration-500
+            "
+            >
+              Visitar
+            </button>
+          </a>
+          <a href="">
+            <button
+              className="group py-2 px-10 mt-5 p-2 text-cyan-500 w-full 
+              uppercase rounded-xl 
+            font-bold shadow-lg border-2 border-cyan-500
+            hover:text-white
+            hover:shadow-[0px_0px_9px_3px_#13435e]
+            hover:bg-cyan-500
+            transition-all duration-500
+            "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                className="text-cyan-500 transition-colors duration-500 group-hover:text-gray-900"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+              </svg>
+            </button>
+          </a>
+        </div>
       </div>
-
     </div>
   );
 }
-

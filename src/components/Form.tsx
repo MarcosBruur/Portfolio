@@ -21,7 +21,7 @@ export default function Form() {
   const handleChange = (
     e:
       | React.ChangeEvent<HTMLInputElement>
-      | React.ChangeEvent<HTMLTextAreaElement>
+      | React.ChangeEvent<HTMLTextAreaElement>,
   ) => {
     setField({
       ...field,
@@ -67,7 +67,7 @@ export default function Form() {
   };
 
   return (
-    <div className="inline-block px-5 py-10 lg:rounded-lg shadow-lg shadow-blue-500 border-y-3 lg:border-2 border-indigo-600 w-full lg:w-3/4">
+    <div className="lg:animate-fade-right lg:animate-duration-2000 inline-block px-5 py-10 lg:rounded-lg shadow-lg  border-y-3 lg:border-2 border-cyan-700 w-full lg:w-3/4">
       <form action="" onSubmit={handleSubmit}>
         <div className="mb-5 flex flex-col lg:grid lg:grid-cols-4 lg:items-center gap-4">
           <label
@@ -110,7 +110,12 @@ export default function Form() {
         <input
           type="submit"
           value="Enviar"
-          className="text-center text-xl p-2 mt-6 bg-blue-700 w-full hover:bg-blue-800 uppercase font-bold shadow-lg hover:cursor-pointer"
+          className="mt-5 py-2 px-10 text-cyan-500 w-full uppercase rounded-xl 
+            font-bold shadow-lg border-2 border-cyan-500
+            hover:text-white
+            hover:shadow-[0px_0px_9px_3px_#13435e]
+            hover:bg-cyan-500
+            transition-all duration-500"
         />
       </form>
       <Notification
