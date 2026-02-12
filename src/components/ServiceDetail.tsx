@@ -1,5 +1,4 @@
 import type { ServiceType } from "../types";
-import { useInView } from "../hooks/useInView";
 
 type ServiceDetailProps = {
   service: ServiceType;
@@ -7,12 +6,13 @@ type ServiceDetailProps = {
 
 export default function ServiceDetail({ service }: ServiceDetailProps) {
   const Icon = service.icon;
-  const { ref, isVisible } = useInView();
+
   return (
     <>
       <div
-        ref={ref}
-        className={`${isVisible &&'animate-fade animate-duration-1200 animate-ease-in container border-y-2 mb-10 lg:mb-5 lg:border-2  border-indigo-600 lg:rounded-4xl p-4 shadow-lg lg:shadow-xl shadow-blue-500'}
+        className={`relative z-10 
+            "animate-fade animate-duration-1200 animate-ease-in border-y-2 mb-10 lg:mb-5 lg:border-2 bg-linear-to-r from-purple-900  to-purple-950 border-violet-600 lg:rounded-4xl p-4 shadow-lg lg:shadow-lg shadow-violet-700"
+          
                       ${service.id === 1 ? "col-span-3" : ""}
                       ${
                         service.id === 2
@@ -24,13 +24,13 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
       >
         <div className="flex justify-center items-center gap-4">
           <div className="flex flex-col items-center gap-2">
-            <Icon className="size-10 text-blue-300" />
-            <h3 className="text-blue-300 text-2xl uppercase font-black">
+            <Icon className="size-10 text-cyan-600" />
+            <h3 className="text-cyan-600 text-3xl uppercase font-bold">
               {service.title}
             </h3>
           </div>
         </div>
-        <p className="mt-2">{service.text}</p>
+        <p className="mt-2 text-lg">{service.text}</p>
       </div>
     </>
   );
