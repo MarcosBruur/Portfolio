@@ -43,7 +43,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               Visitar
             </button>
           </a>
-          <a href="">
+          <a href={project.github}>
             <button
               className="group py-2 px-10 mt-5 p-2 text-cyan-500 w-full 
               uppercase rounded-xl 

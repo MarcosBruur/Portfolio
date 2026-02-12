@@ -17,6 +17,7 @@ export type ProjectType = {
   title: string;
   desc: string;
   url: string;
+  github: string;
 };
 
 export type FieldType = {
