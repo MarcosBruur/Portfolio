@@ -22,7 +22,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.title}
         </h2>
 
-        <p className="mb-4 text-start text-gray-400">{project.desc}</p>
+        <p className="mb-4 text-start text-gray-500 dark:text-gray-400">
+          {project.desc}
+        </p>
 
         <div className="flex justify-around items-center">
           <a

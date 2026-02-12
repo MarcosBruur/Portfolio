@@ -6,8 +6,14 @@ export default function Header() {
   const [darkMode, setDarkMode] = useState(true);
 
   const toggleDarkMode = () => {
+    if (darkMode) {
+      document.documentElement.classList.remove("dark");
+    } else {
+      document.documentElement.classList.add("dark");
+    }
     setDarkMode(!darkMode);
   };
+
   return (
     <>
       <header
@@ -17,7 +23,11 @@ export default function Header() {
       >
         <div className="lg:p-4 flex justify-between">
           <div className="border-2 border-cyan-400 p-4 rounded-full">
-            <p className="text-cyan-400 text-3xl text-center lg:text-left font-pixel rotate-340">
+            <p
+              className="text-cyan-400 text-3xl text-center 
+            lg:text-left font-pixel rotate-340
+            "
+            >
               MB
             </p>
           </div>
@@ -40,7 +50,7 @@ export default function Header() {
                 className={({ isActive }) =>
                   isActive
                     ? "bg-indigo-700 border-b-4 border-cyan-300 w-full lg:w-auto lg:bg-transparent lg:text-blue-300 uppercase font-bold text-lg"
-                    : "text-white uppercase font-bold text-lg w-full lg:w-auto"
+                    : "dark:text-white uppercase font-bold text-lg w-full lg:w-auto"
                 }
               >
                 Tec
@@ -50,7 +60,7 @@ export default function Header() {
                 className={({ isActive }) =>
                   isActive
                     ? "bg-indigo-700 border-b-4 border-cyan-300 w-full lg:w-auto lg:bg-transparent lg:text-blue-300 uppercase font-bold text-lg"
-                    : "text-white uppercase font-bold text-lg w-full lg:w-auto"
+                    : "dark:text-white uppercase font-bold text-lg w-full lg:w-auto"
                 }
               >
                 Proyectos
@@ -60,7 +70,7 @@ export default function Header() {
                 className={({ isActive }) =>
                   isActive
                     ? "bg-indigo-700 border-b-4 border-cyan-300 w-full lg:w-auto lg:bg-transparent lg:text-blue-300 uppercase font-bold text-lg"
-                    : "text-white uppercase font-bold text-lg w-full lg:w-auto"
+                    : "dark:text-white uppercase font-bold text-lg w-full lg:w-auto"
                 }
               >
                 Contáctame
@@ -68,7 +78,7 @@ export default function Header() {
             </nav>
             <button
               onClick={toggleDarkMode}
-              className="bg-slate-700 w-25 h-12 flex justify-between 
+              className="dark:bg-slate-700 bg-slate-500 w-25 h-12 flex justify-between 
               rounded-lg p-1"
             >
               <div

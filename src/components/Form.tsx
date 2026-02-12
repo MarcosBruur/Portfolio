@@ -72,7 +72,8 @@ export default function Form() {
         <div className="mb-5 flex flex-col lg:grid lg:grid-cols-4 lg:items-center gap-4">
           <label
             htmlFor="email"
-            className="text-2xl xl:text-4xl  font-black col-span-1 underline"
+            className="text-2xl xl:text-4xl  font-black col-span-1 
+            underline"
           >
             Email
           </label>
@@ -81,7 +82,10 @@ export default function Form() {
             name="email"
             id="email"
             placeholder="email@gmail.com"
-            className="w-full border-2 text-center  border-white p-2 rounded-lg lg:col-span-3 text-lg xl:text-2xl"
+            className="w-full border-2 text-center  border-blue-500 
+            p-2 rounded-lg lg:col-span-3 text-lg xl:text-2xl
+            dark:border-white
+            "
             onChange={handleChange}
             value={field.email}
           />
@@ -97,7 +101,10 @@ export default function Form() {
             name="message"
             id="message"
             placeholder="Deja tu mensaje aquí"
-            className="border-2 text-center border-white p-2 rounded-lg col-span-3 h-45 text-lg xl:text-2xl"
+            className="border-2 text-center p-2 border-blue-500 
+            rounded-lg col-span-3 h-45 text-lg xl:text-2xl
+            dark:border-white
+            "
             onChange={handleChange}
             value={field.message}
           />
@@ -110,12 +117,14 @@ export default function Form() {
         <input
           type="submit"
           value="Enviar"
-          className="mt-5 py-2 px-10 text-cyan-500 w-full uppercase rounded-xl 
-            font-bold shadow-lg border-2 border-cyan-500
-            hover:text-white
-            hover:shadow-[0px_0px_9px_3px_#13435e]
-            hover:bg-cyan-500
-            transition-all duration-500"
+          className="mt-5 py-2 px-10 w-full 
+          uppercase rounded-xl font-bold shadow-lg border-2 
+          border-cyan-500 hover:text-white bg-cyan-500
+          dark:text-cyan-500
+          dark:bg-transparent
+          hover:bg-cyan-600
+          hover:shadow-[0px_0px_9px_3px_#13435e]  
+          transition-all duration-500"
         />
       </form>
       <Notification

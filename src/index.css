@@ -3,13 +3,12 @@
 @import "tailwindcss-animated";
 
 body {
-  background-color: #101722;
-  color: white;
-
   /* Firefox */
   scrollbar-width: thin;
   scrollbar-color: #3a598c #101722;
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* Chrome / Edge / Safari */
 
@@ -51,7 +50,7 @@ body {
 @theme {
   --animate-gradient: gradientMove 5s linear infinite;
   --font-pixel: "Jacquard 24", system-ui;
-  --bg-color: #101722;
+  --color-bgdark: #101722;
 }
 
 /* Backend */
