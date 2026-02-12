@@ -6,12 +6,12 @@ export default function HomePage() {
   return (
     <>
       <div className="flex justify-between">
-        <div className="w-7/8">
+        <div className="w-full lg:w-7/8">
           <p className="text-4xl text-start text-cyan-500">
             Hola, Mi nombre es
           </p>
           <h1
-            className="text-7xl font-bold mb-5 
+            className="text-center lg:text-start text-7xl font-bold mb-5 
             bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500
             bg-[length:200%]
             bg-clip-text text-transparent
@@ -33,7 +33,7 @@ export default function HomePage() {
           <h2 className="text-6xl">Desarrollador FullStack</h2>
 
           <motion.div
-            className="text-start mt-30 rounded-xl bg-gradient-to-tr from-sky-950 via-sky-900 to-sky-950 p-12"
+            className="w-full text-start mt-30 rounded-xl bg-gradient-to-tr from-sky-950 via-sky-900 to-sky-950 p-12"
             initial={{ opacity: 0, x: -80 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
@@ -48,7 +48,7 @@ export default function HomePage() {
                 Sobre Mí
               </h3>
             </div>
-            <p className="text-lg mt-6 text-gray-300">
+            <p className="text-xl lg:text-lg mt-6 text-gray-300">
               Mi nombre es Marcos, soy un apasionado de la tecnologia. Tengo
               experiencia como programador web FullStack, más centrado en
               backend. Me encanta aprender nuevas tecnologías y mejorar mis
@@ -61,7 +61,7 @@ export default function HomePage() {
           </motion.div>
         </div>
 
-        <div className="w-full flex justify-end">
+        <div className="hidden lg:w-full lg:flex lg:justify-end">
           <div className="animate-fade-left animate-duration-1000 w-3/4">
             <img
               src="/marcos.webp"
@@ -170,9 +170,14 @@ export default function HomePage() {
           </div>
         </div>
         <div>
-          <img src="dev.png" alt="" className="w-4xl h-auto" />
+          <img
+            src="dev.png"
+            alt=""
+            className="hidden lg:inline-block w-4xl h-auto"
+          />
         </div>
       </div>
+      <img src="dev.png" alt="" className="lg:hidden w-2xl h-auto" />
     </>
   );
 }

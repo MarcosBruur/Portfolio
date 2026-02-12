@@ -3,12 +3,12 @@ import { logos } from "../data";
 export default function SkillsPage() {
   return (
     <>
-      <div className="container flex justify-between gap-15 items-center">
+      <div className="container flex flex-col lg:flex-row lg:justify-between gap-15 items-center">
         <div
           className="animate-fade-right animate-duration-1500 bg-gradient-to-tr from-sky-950 
-        via-sky-900 to-sky-950 px-6 py-10 w-2/5 rounded-xl h-2/3"
+        via-sky-900 to-sky-950 px-6 py-10 lg:w-2/5 rounded-xl h-2/3 mt-5"
         >
-          <p className="text-xl text-gray-300 text-start">
+          <p className="text-2xl lg:text-xl text-gray-300 text-start">
             Tengo conociminto y experiencia en varias tecnologias, tanto de
             <span className="text-cyan-500"> frontend</span>,
             <span className="text-cyan-500"> backend</span>, algo de

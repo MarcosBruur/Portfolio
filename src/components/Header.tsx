@@ -11,9 +11,9 @@ export default function Header() {
     } else {
       document.documentElement.classList.add("dark");
     }
+
     setDarkMode(!darkMode);
   };
-
   return (
     <>
       <header
@@ -21,18 +21,22 @@ export default function Header() {
         backdrop-blur-md 
         shadow-lg"
       >
-        <div className="lg:p-4 flex justify-between">
-          <div className="border-2 border-cyan-400 p-4 rounded-full">
-            <p
-              className="text-cyan-400 text-3xl text-center 
-            lg:text-left font-pixel rotate-340
-            "
-            >
+        <div
+          className="flex flex-col 
+        lg:p-4 lg:flex-row lg:justify-between
+        "
+        >
+          <div className="hidden lg:inline-block border-2 border-cyan-400 p-4 rounded-full">
+            <p className="text-cyan-400 text-3xl text-center lg:text-left font-pixel rotate-340">
               MB
             </p>
           </div>
 
-          <div className="flex justify-between items-center">
+          <div
+            className="flex flex-col items-center gap-2
+          lg:flex-row
+          lg:justify-between"
+          >
             <nav className="flex flex-col lg:mr-20 lg:flex-row text-center w-full lg:w-auto items-center lg:gap-8">
               <NavLink
                 to="/"
@@ -78,7 +82,7 @@ export default function Header() {
             </nav>
             <button
               onClick={toggleDarkMode}
-              className="dark:bg-slate-700 bg-slate-500 w-25 h-12 flex justify-between 
+              className="bg-slate-700 w-25 h-12 flex justify-between 
               rounded-lg p-1"
             >
               <div
