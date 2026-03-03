@@ -10,7 +10,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       {/* Imagen */}
       <div className="animate-fade-down animate-duration-1500 h-50 w-full overflow-hidden flex items-center justify-center mb-3">
         <img
-          src={`${project.img}.png`}
+          src={project.img}
           alt={`Imagen de ${project.title}`}
           className="size-full object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
         />

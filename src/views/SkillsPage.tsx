@@ -36,7 +36,7 @@ export default function SkillsPage() {
                     (logo, index) => (
                       <img
                         key={index}
-                        src={`/${logo}.png`}
+                        src={logo}
                         alt={`Logo de ${logo}`}
                         className="w-22 h-25 mx-4"
                       />
@@ -61,7 +61,7 @@ export default function SkillsPage() {
                     (logo, index) => (
                       <img
                         key={index}
-                        src={`/${logo}.png`}
+                        src={logo}
                         alt={`Logo de ${logo}`}
                         className="w-22 h-25 mx-4"
                       />

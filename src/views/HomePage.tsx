@@ -41,7 +41,11 @@ export default function HomePage() {
           >
             <div className="animate-fade-right animate-duration-1000 flex items-center gap-2">
               <div className="animate-wiggle-more animate-infinite">
-                <img src="coffe.png" alt="coffe" className="size-15" />
+                <img
+                  src="https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772561739/marc_vwdbeu.webp"
+                  alt="coffe"
+                  className="size-15"
+                />
               </div>
               <h3 className="text-4xl font-bold text-white">
                 <span className="text-cyan-500 mr-1">#</span>
@@ -64,7 +68,7 @@ export default function HomePage() {
         <div className="hidden lg:w-full lg:flex lg:justify-end">
           <div className="animate-fade-left animate-duration-1000 w-3/4">
             <img
-              src="/marcos.webp"
+              src="https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772561972/foto_zkjikm.webp"
               alt="Imagen marcos"
               className="shadow object-contain"
             />
@@ -171,13 +175,17 @@ export default function HomePage() {
         </div>
         <div>
           <img
-            src="dev.png"
+            src="https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772562434/dev_ijuahz.webp"
             alt=""
             className="hidden lg:inline-block w-4xl h-auto"
           />
         </div>
       </div>
-      <img src="dev.png" alt="" className="lg:hidden w-2xl h-auto" />
+      <img
+        src="https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772562434/dev_ijuahz.webp"
+        alt=""
+        className="lg:hidden w-2xl h-auto"
+      />
     </>
   );
 }
