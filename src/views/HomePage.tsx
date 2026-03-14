@@ -68,9 +68,9 @@ export default function HomePage() {
         <div className="hidden lg:w-full lg:flex lg:justify-end">
           <div className="animate-fade-left animate-duration-1000 w-3/4">
             <img
-              src="https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772561972/foto_zkjikm.webp"
+              src="https://res.cloudinary.com/dbjyf3qb3/image/upload/v1773529101/marcos1_qlzdhh.webp"
               alt="Imagen marcos"
-              className="shadow object-contain"
+              className="shadow object-contain  w-full h-[500px]"
             />
 
             <div className="w-full flex flex-col items-center">
@@ -182,7 +182,7 @@ export default function HomePage() {
         </div>
       </div>
       <img
-        src="https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772562434/dev_ijuahz.webp"
+        src="https://res.cloudinary.com/dbjyf3qb3/image/upload/v1773529101/marcos1_qlzdhh.webp"
         alt=""
         className="lg:hidden w-2xl h-auto"
       />
