@@ -1,6 +1,5 @@
 import {
   GlobeAltIcon,
-  WrenchScrewdriverIcon,
   Cog6ToothIcon,
   CloudArrowUpIcon,
   StarIcon,
