@@ -67,13 +67,13 @@ export default function Form() {
   };
 
   return (
-    <div className="lg:animate-fade-right lg:animate-duration-2000 inline-block px-5 py-10 lg:rounded-lg shadow-lg  border-y-3 lg:border-2 border-cyan-700 w-full lg:w-3/4">
+    <div className="bg-card lg:animate-fade-right lg:animate-duration-2000 inline-block px-5 py-10 lg:rounded-lg shadow-lg  border-y-3 lg:border-2 w-full lg:w-3/4">
       <form action="" onSubmit={handleSubmit}>
         <div className="mb-5 flex flex-col lg:grid lg:grid-cols-4 lg:items-center gap-4">
           <label
             htmlFor="email"
-            className="text-2xl xl:text-4xl  font-black col-span-1 
-            underline"
+            className="text-2xl xl:text-4xl font-black col-span-1 
+            underline text-white"
           >
             Email
           </label>
@@ -82,9 +82,9 @@ export default function Form() {
             name="email"
             id="email"
             placeholder="email@gmail.com"
-            className="w-full border-2 text-center  border-blue-500 
-            p-2 rounded-lg lg:col-span-3 text-lg xl:text-2xl
-            dark:border-white
+            className="w-full border-2 text-center  
+            p-2 lg:col-span-3 text-lg xl:text-2xl
+          bg-white
             "
             onChange={handleChange}
             value={field.email}
@@ -93,7 +93,7 @@ export default function Form() {
         <div className="flex flex-col lg:grid lg:grid-cols-4 lg:items-start gap-4">
           <label
             htmlFor="message"
-            className="text-2xl xl:text-4xl font-black col-span-1 underline "
+            className="text-2xl xl:text-4xl font-black col-span-1 underline text-white"
           >
             Mensaje
           </label>
@@ -101,9 +101,9 @@ export default function Form() {
             name="message"
             id="message"
             placeholder="Deja tu mensaje aquí"
-            className="border-2 text-center p-2 border-blue-500 
-            rounded-lg col-span-3 h-45 text-lg xl:text-2xl
-            dark:border-white
+            className="border-2 text-center p-2 
+            col-span-3 h-45 text-lg xl:text-2xl
+            bg-white
             "
             onChange={handleChange}
             value={field.message}
@@ -118,13 +118,10 @@ export default function Form() {
           type="submit"
           value="Enviar"
           className="mt-5 py-2 px-10 w-full 
-          uppercase rounded-xl font-bold shadow-lg border-2 
-          border-cyan-500 hover:text-white bg-cyan-500
-          dark:text-cyan-500
-          dark:bg-transparent
-          hover:bg-cyan-600
-          hover:shadow-[0px_0px_9px_3px_#13435e]  
-          transition-all duration-500"
+          uppercase font-bold shadow-lg border-2 
+          border-primary text-white bg-secondary-dark
+          hover:shadow-[0px_0px_9px_3px_var(--color-primary-shadow)]  
+          transition-all duration-500 text-xl cursor-pointer"
         />
       </form>
       <Notification

@@ -8,9 +8,9 @@ export default function Layout() {
     <>
       <div
         className="
-        bg-gray-200
-      dark:bg-bgdark 
-      dark:text-white
+        bg-bg-light
+      dark:bg-bg 
+      dark:text-text
       "
       >
         <ScrollToTop />

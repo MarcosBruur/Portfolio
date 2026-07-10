@@ -1,7 +1,9 @@
 import {
   GlobeAltIcon,
-  CircleStackIcon,
-  ComputerDesktopIcon,
+  WrenchScrewdriverIcon,
+  Cog6ToothIcon,
+  CloudArrowUpIcon,
+  StarIcon,
 } from "@heroicons/react/24/outline";
 import type { LogoType, ProjectType, ServiceType } from "../types";
 
@@ -9,20 +11,26 @@ export const services: ServiceType[] = [
   {
     id: 1,
     icon: GlobeAltIcon,
-    title: "Diseño Web",
-    text: "Experiencia diseñando desde cero, creando y adaptando aplicaciones web completas 100% responsive",
+    title: "Desarrollo Web",
+    text: "Construcción de aplicaciones web modernas y funcionales, integrando frontend y backend para crear soluciones completas. Trabajo principalmente con Django y React.",
   },
   {
     id: 2,
-    icon: CircleStackIcon,
-    title: "Desarrollo Backend",
-    text: "Creación y manejo de entornos virtuales, Api Rest, Graphql, contenedores Docker, manejo de SQL/NoSQL y scripts",
+    icon: CloudArrowUpIcon,
+    title: "Despliegue de aplicaciones",
+    text: "Configuración y puesta en producción de aplicaciones en servidores Linux, cuidando que el entorno sea estable, ordenado y mantenible. Utilizo herramientas como Docker y Linux.",
   },
   {
     id: 3,
-    icon: ComputerDesktopIcon,
-    title: "Desarrollo FullStack",
-    text: "Integracion completa entre Backend y Frontend, Creacion y consumo de APIs",
+    icon: Cog6ToothIcon,
+    title: "Automatización de procesos",
+    text: "Desarrollo de scripts, flujos y herramientas para reducir tareas repetitivas, procesar información y optimizar procesos de trabajo. Trabajo principalmente con Python y n8n.",
+  },
+  {
+    id: 4,
+    icon: StarIcon,
+    title: "Automatización con IA",
+    text: "Integración de herramientas de inteligencia artificial para crear asistentes, agentes y flujos inteligentes aplicados a procesos reales. Utilizo herramientas como MCP y agentes de IA.",
   },
 ];
 
@@ -31,9 +39,6 @@ export const logos: LogoType = {
     "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772562821/django_rvtw66.webp",
     "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772562683/docker_dcoqct.webp",
     "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772562702/git_qeneo5.webp",
-    "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772562662/java_tvd4hw.webp",
-    "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772562723/laravel_sxcl0g.webp",
-    "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772562714/php_qwkbgk.webp",
     "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772562650/python_dxuaiw.webp",
   ],
   frontend: [
@@ -42,7 +47,6 @@ export const logos: LogoType = {
     "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772563109/html_wlnwcq.webp",
     "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772563070/javascript_nss9kt.webp",
     "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772563107/react_lg5gap.webp",
-    "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772563109/vue_agppdt.webp",
   ],
 };
 

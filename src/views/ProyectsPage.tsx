@@ -10,7 +10,7 @@ export default function ProyectsPage() {
           <img src="devgif.gif" alt="" className="size-30" />
           <h2 className="relative text-5xl font-bold">
             Proyectos
-            <span className="animate-grow-underline absolute left-1/2 -translate-x-1/2 bottom-[-8px] w-56 h-1 bg-cyan-500"></span>
+            <span className="animate-grow-underline absolute left-1/2 -translate-x-1/2 bottom-[-8px] w-56 h-1 bg-primary"></span>
           </h2>
         </div>
         <motion.div

@@ -22,7 +22,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.title}
         </h2>
 
-        <p className="mb-4 text-start text-gray-500 dark:text-gray-400">
+        <p className="mb-4 text-start text-text-soft dark:text-text-soft">
           {project.desc}
         </p>
 
@@ -34,11 +34,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             className="mt-auto"
           >
             <button
-              className="py-2 px-10 text-cyan-500 w-full uppercase rounded-xl 
-            font-bold shadow-lg border-2 border-cyan-500
-            hover:text-white
-            hover:shadow-[0px_0px_9px_3px_#13435e]
-            hover:bg-cyan-500
+              className="py-2 px-10 text-white w-full uppercase 
+            font-bold shadow-lg border-2 border-primary
+            bg-secondary-dark
+            hover:shadow-[0px_0px_9px_3px_var(--color-primary-shadow)]
             transition-all duration-500
             "
             >
@@ -47,12 +46,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </a>
           <a href={project.github}>
             <button
-              className="group py-2 px-10 mt-5 p-2 text-cyan-500 w-full 
-              uppercase rounded-xl 
-            font-bold shadow-lg border-2 border-cyan-500
-            hover:text-white
-            hover:shadow-[0px_0px_9px_3px_#13435e]
-            hover:bg-cyan-500
+              className="group py-2 px-10 mt-5 p-2 text-primary w-full 
+              uppercase font-bold shadow-lg border-2 border-primary
+            bg-white hover:shadow-[0px_0px_9px_3px_var(--color-primary-shadow)]
             transition-all duration-500
             "
             >
@@ -60,7 +56,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
                 height="25"
-                className="text-cyan-500 transition-colors duration-500 group-hover:text-gray-900"
+                className="text-primary transition-colors duration-500 group-hover:text-text-strong"
                 fill="currentColor"
                 viewBox="0 0 16 16"
               >

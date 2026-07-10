@@ -46,7 +46,7 @@ export default function Notification({
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="pointer-events-auto w-full max-w-sm overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+          <div className="pointer-events-auto w-full max-w-sm overflow-hidden rounded-lg bg-surface shadow-lg ring-1 ring-black ring-opacity-5">
             <div className="p-4">
               <div className="flex justify-around items-center">
                 <div className="flex-shrink-0">
@@ -57,16 +57,16 @@ export default function Notification({
                   )}
                 </div>
                 <div className="ml-3 w-0 flex-1 pt-0.5">
-                  <p className="text-sm font-black text-gray-900 ">
+                  <p className="text-sm font-black text-text-strong ">
                     {notification.message}
                   </p>
-                  <p className="mt-1 text-sm text-gray-500"></p>
+                  <p className="mt-1 text-sm text-text-soft"></p>
                 </div>
 
                 <div className="ml-4 flex flex-shrink-0">
                   <button
                     type="button"
-                    className="inline-flex rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                    className="inline-flex rounded-md bg-surface text-text-soft hover:text-text-strong focus:outline-none focus:ring-2 focus:ring-secondary-active focus:ring-offset-2"
                     onClick={handleClick}
                   >
                     <span className="sr-only">Cerrar</span>

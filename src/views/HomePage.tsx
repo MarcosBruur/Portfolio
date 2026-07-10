@@ -7,33 +7,30 @@ export default function HomePage() {
     <>
       <div className="flex justify-between">
         <div className="w-full lg:w-7/8">
-          <p className="text-4xl text-start text-cyan-500">
-            Hola, Mi nombre es
-          </p>
-          <h1
-            className="text-center lg:text-start text-7xl font-bold mb-5 
-            bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500
-            bg-[length:200%]
-            bg-clip-text text-transparent
-            animate-gradient"
-          >
-            Marcos{" "}
-            <span
-              className="text-7xl font-bold mb-5 
-              bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500
-              bg-[length:200%]
-              bg-clip-text text-transparent
-              animate-gradient"
+          <div className="flex-row space-y-2">
+            <p className="text-4xl text-start text-primary">
+              Hola, Mi nombre es
+            </p>
+            <p
+              className="lg:text-start text-7xl font-bold 
+            text-white"
             >
-              Bruno
-            </span>
-          </h1>
-          <p className="text-cyan-500 text-4xl text-start ml-4">y soy</p>
+              <span className="hero-highlight inline-block whitespace-nowrap px-4 py-2">
+                Marcos Bruno
+              </span>
+            </p>
 
-          <h2 className="text-6xl">Desarrollador FullStack</h2>
+            <p className="text-primary text-4xl text-start ml-4">y soy</p>
+
+            <p className="text-6xl text-white font-bold">
+              <span className="hero-highlight hero-highlight-reverse inline-block whitespace-nowrap px-4 py-2">
+                Desarrollador FullStack
+              </span>
+            </p>
+          </div>
 
           <motion.div
-            className="w-full text-start mt-30 rounded-xl bg-gradient-to-tr from-sky-950 via-sky-900 to-sky-950 p-12"
+            className="w-full text-start mt-30 rounded-xl bg-card p-12"
             initial={{ opacity: 0, x: -80 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
@@ -48,19 +45,20 @@ export default function HomePage() {
                 />
               </div>
               <h3 className="text-4xl font-bold text-white">
-                <span className="text-cyan-500 mr-1">#</span>
+                <span className="mr-1">#</span>
                 Sobre Mí
               </h3>
             </div>
-            <p className="text-xl lg:text-lg mt-6 text-gray-300">
-              Mi nombre es Marcos, soy un apasionado de la tecnologia. Tengo
-              experiencia como programador web FullStack, más centrado en
-              backend. Me encanta aprender nuevas tecnologías y mejorar mis
-              habilidades constantemente para ofrecer soluciones eficientes y de
-              calidad.
-            </p>
-            <p className="text-lg text-gray-300">
-              Cantidad de cafés por día: de 2 a 3
+            <p className="text-xl mt-6 text-bg">
+              Soy desarrollador fullstack con un perfil orientado principalmente
+              al backend, la automatización de procesos y la creación de
+              soluciones apoyadas en inteligencia artificial. Me enfoco en
+              construir aplicaciones funcionales, escalables y pensadas para
+              resolver problemas reales, combinando desarrollo web,
+              automatizaciones, integración de herramientas y despliegues en
+              entornos productivos. Mi objetivo es desarrollar soluciones que no
+              solo funcionen bien, sino que también ayuden a optimizar tareas,
+              mejorar procesos y aportar valor de forma práctica.
             </p>
           </motion.div>
         </div>
@@ -76,7 +74,7 @@ export default function HomePage() {
             <div className="w-full flex flex-col items-center">
               <div
                 className="flex justify-around w-1/2 
-              gap-2 mt-2 px-8 py-3 bg-white rounded"
+              gap-2 mt-2 px-8 py-3 bg-surface rounded"
               >
                 <a
                   href="https://github.com/MarcosBruur"
@@ -116,14 +114,14 @@ export default function HomePage() {
                   href="https://www.instagram.com/marcos_bruno_ur/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:scale-120 "
+                  className="hover:scale-120"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="30"
                     height="30"
                     fill="currentColor"
-                    className="text-white bg-linear-to-br from-fuchsia-800 via-red-500 to-orange-300"
+                    className="rounded-xl text-white bg-linear-to-br from-fuchsia-800 via-red-500 to-orange-300"
                     viewBox="0 0 16 16"
                   >
                     <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
@@ -133,9 +131,12 @@ export default function HomePage() {
               <div className="w-1/2">
                 <Link to={"/contact"}>
                   <button
-                    className="w-full text-center text-xl p-2 
-                mt-2 bg-blue-700 hover:bg-blue-800 uppercase 
-                font-bold shadow-lg hover:cursor-pointer hover:scale-105"
+                    className="text-white w-full text-center text-xl p-2 
+                mt-2 bg-secondary-dark uppercase 
+                font-bold shadow-lg hover:cursor-pointer
+                hover:shadow-[0px_0px_9px_3px_var(--color-primary-shadow)]
+                transition-all duration-500
+                "
                   >
                     Contactar
                   </button>
@@ -148,44 +149,48 @@ export default function HomePage() {
 
       <div className="flex justify-between items-center">
         <div>
-          <h2 className="text-5xl mt-20 font-bold mb-5 text-center relative inline-block">
+          <h2 className="text-black text-7xl mt-40 lg:mt-55 font-black mb-30 ">
             Mis Habilidades
-            <motion.span
-              className="absolute left-0 bottom-[-8px] h-1 bg-cyan-500"
-              initial={{ width: 0 }}
-              whileInView={{ width: "100%" }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            />
           </h2>
 
-          <div className="lg:grid lg:grid-cols-6 lg:grid-rows-3 lg:gap-10 mt-10 mb-5 relative">
-            <motion.div
-              className="bg-cyan-600 mb-10 w-2 col-start-4 row-start-1 row-end-4 -translate-x-22 z-0 origin-top"
-              initial={{ scaleY: 0 }}
-              whileInView={{ scaleY: 1 }}
-              transition={{ duration: 3 }}
-              viewport={{ once: true }}
-            />
+          <div className="relative mt-10 mb-5 lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:gap-x-28 lg:gap-y-20">
+            <div className="pointer-events-none absolute inset-0 z-0 hidden lg:block">
+              <motion.div
+                className="absolute left-1/2 top-[24%] h-2 w-28 -translate-x-1/2 bg-secondary origin-left"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                transition={{ duration: 1.2 }}
+                viewport={{ once: true }}
+              />
+              <motion.div
+                className="absolute left-1/2 top-[76%] h-2 w-28 -translate-x-1/2 bg-secondary origin-left"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                transition={{ duration: 1.2, delay: 0.2 }}
+                viewport={{ once: true }}
+              />
+              <motion.div
+                className="absolute left-[25%] top-1/2 h-20 w-2 -translate-y-1/2 bg-secondary origin-top"
+                initial={{ scaleY: 0 }}
+                whileInView={{ scaleY: 1 }}
+                transition={{ duration: 1.2, delay: 0.4 }}
+                viewport={{ once: true }}
+              />
+              <motion.div
+                className="absolute left-[75%] top-1/2 h-20 w-2 -translate-y-1/2 bg-secondary origin-top"
+                initial={{ scaleY: 0 }}
+                whileInView={{ scaleY: 1 }}
+                transition={{ duration: 1.2, delay: 0.6 }}
+                viewport={{ once: true }}
+              />
+            </div>
 
             {services.map((service) => (
               <ServiceDetail key={service.id} service={service} />
             ))}
           </div>
         </div>
-        <div>
-          <img
-            src="https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772562434/dev_ijuahz.webp"
-            alt=""
-            className="hidden lg:inline-block w-4xl h-auto"
-          />
-        </div>
       </div>
-      <img
-        src="https://res.cloudinary.com/dbjyf3qb3/image/upload/v1773529101/marcos1_qlzdhh.webp"
-        alt=""
-        className="lg:hidden w-2xl h-auto"
-      />
     </>
   );
 }
