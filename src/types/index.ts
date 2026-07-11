@@ -8,8 +8,8 @@ export type ServiceType = {
 };
 
 export type LogoType = {
-  backend: string[];
-  frontend: string[];
+  web: string[];
+  automation: string[];
 };
 
 export type ProjectType = {

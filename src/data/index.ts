@@ -34,18 +34,23 @@ export const services: ServiceType[] = [
 ];
 
 export const logos: LogoType = {
-  backend: [
+  web: [
     "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772562821/django_rvtw66.webp",
     "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772562683/docker_dcoqct.webp",
     "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772562702/git_qeneo5.webp",
     "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772562650/python_dxuaiw.webp",
-  ],
-  frontend: [
     "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772563106/css_dhushq.webp",
     "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772562702/git_qeneo5.webp",
     "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772563109/html_wlnwcq.webp",
     "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772563070/javascript_nss9kt.webp",
     "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772563107/react_lg5gap.webp",
+  ],
+  automation: [
+    "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1783812105/n8n-logo_io1fhn.webp",
+    "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772562650/python_dxuaiw.webp",
+    "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1783812348/pandas_logo.webp",
+    "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1783812839/gemini_logo.webp",
+    "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1783812741/openai_logo.webp",
   ],
 };
 

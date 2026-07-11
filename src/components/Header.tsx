@@ -36,6 +36,7 @@ export default function Header() {
         lg:p-4 lg:flex-row lg:justify-around
         "
         >
+          
           <div
             className="flex flex-col items-center gap-2
           lg:flex-row
