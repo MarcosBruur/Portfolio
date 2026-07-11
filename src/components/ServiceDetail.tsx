@@ -19,21 +19,22 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
       >
         <div className="pointer-events-none absolute inset-0 translate-x-3 translate-y-3 border-y-2 border-black bg-black lg:border-2 lg:rounded-4xl" />
 
-        <div className="relative z-10 flex min-h-52 flex-col justify-center animate-fade animate-duration-1200 animate-ease-in border-y-2 border-black bg-white p-4 lg:border-2 lg:rounded-4xl">
+        <div className="relative z-10 flex min-h-52 flex-col justify-center animate-fade animate-duration-1200 animate-ease-in border-y-2 border-black bg-white p-4 lg:border-2 lg:rounded-4xl 2xl:min-h-60 2xl:p-6">
           <div className="flex justify-center items-center gap-4">
             <div className="flex flex-col items-center gap-2">
               <Icon
                 className="
-            size-10 
+            size-10 2xl:size-12
             
             "
               />
               <h3
                 className="
             
-            text-3xl 
+            text-2xl sm:text-3xl 2xl:text-4xl
             uppercase 
             font-bold
+            text-center
             
             "
               >
@@ -42,7 +43,9 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
             </div>
           </div>
 
-          <p className="mt-2 text-lg text-center">{service.text}</p>
+          <p className="mt-2 text-center text-base sm:text-lg 2xl:text-xl">
+            {service.text}
+          </p>
         </div>
       </div>
     </>

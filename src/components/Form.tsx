@@ -67,12 +67,12 @@ export default function Form() {
   };
 
   return (
-    <div className="bg-card lg:animate-fade-right lg:animate-duration-2000 inline-block px-5 py-10 lg:rounded-lg shadow-lg  border-y-3 lg:border-2 w-full lg:w-3/4">
+    <div className="inline-block w-full bg-card px-5 py-10 shadow-lg border-y-3 lg:w-3/4 lg:animate-fade-right lg:animate-duration-2000 lg:rounded-lg lg:border-2 2xl:max-w-5xl 2xl:px-8">
       <form action="" onSubmit={handleSubmit}>
         <div className="mb-5 flex flex-col lg:grid lg:grid-cols-4 lg:items-center gap-4">
           <label
             htmlFor="email"
-            className="text-2xl xl:text-4xl font-black col-span-1 
+            className="text-2xl xl:text-4xl 2xl:text-5xl font-black col-span-1 
             underline text-white"
           >
             Email
@@ -83,7 +83,7 @@ export default function Form() {
             id="email"
             placeholder="email@gmail.com"
             className="w-full border-2 text-center  
-            p-2 lg:col-span-3 text-lg xl:text-2xl
+            p-2 lg:col-span-3 text-lg xl:text-2xl 2xl:text-3xl
           bg-white
             "
             onChange={handleChange}
@@ -93,7 +93,7 @@ export default function Form() {
         <div className="flex flex-col lg:grid lg:grid-cols-4 lg:items-start gap-4">
           <label
             htmlFor="message"
-            className="text-2xl xl:text-4xl font-black col-span-1 underline text-white"
+            className="text-2xl xl:text-4xl 2xl:text-5xl font-black col-span-1 underline text-white"
           >
             Mensaje
           </label>
@@ -102,7 +102,7 @@ export default function Form() {
             id="message"
             placeholder="Deja tu mensaje aquí"
             className="border-2 text-center p-2 
-            col-span-3 h-45 text-lg xl:text-2xl
+            col-span-3 h-45 text-lg xl:text-2xl 2xl:h-56 2xl:text-3xl
             bg-white
             "
             onChange={handleChange}
@@ -121,7 +121,7 @@ export default function Form() {
           uppercase font-bold shadow-lg border-2 
           border-primary text-white bg-secondary-dark
           hover:shadow-[0px_0px_9px_3px_var(--color-primary-shadow)]  
-          transition-all duration-500 text-xl cursor-pointer"
+          transition-all duration-500 text-xl 2xl:text-2xl cursor-pointer"
         />
       </form>
       <Notification

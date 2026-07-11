@@ -6,9 +6,9 @@ type ProjectCardProps = {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="flex flex-col lg:p-4 mb-20 lg:mb-2">
+    <div className="mb-6 flex h-full flex-col lg:mb-2 lg:p-4">
       {/* Imagen */}
-      <div className="animate-fade-down animate-duration-1500 h-50 w-full overflow-hidden flex items-center justify-center mb-3">
+      <div className="mb-3 flex h-52 w-full animate-fade-down animate-duration-1500 items-center justify-center overflow-hidden sm:h-56 2xl:h-64">
         <img
           src={project.img}
           alt={`Imagen de ${project.title}`}
@@ -18,23 +18,23 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
       {/* Contenido */}
       <div className="flex flex-col flex-1">
-        <h2 className="animate-fade-right animate-duration-1500 capitalize font-bold text-xl mb-2 text-start">
+        <h2 className="mb-2 animate-fade-right animate-duration-1500 text-start text-xl font-bold capitalize 2xl:text-2xl">
           {project.title}
         </h2>
 
-        <p className="mb-4 text-start text-text-soft dark:text-text-soft">
+        <p className="mb-4 flex-1 text-start text-base text-text-soft dark:text-text-soft 2xl:text-lg">
           {project.desc}
         </p>
 
-        <div className="flex justify-around items-center">
+        <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-around">
           <a
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-auto"
+            className="w-full sm:w-auto"
           >
             <button
-              className="py-2 px-10 text-white w-full uppercase 
+              className="w-full px-8 py-2 text-white uppercase 
             font-bold shadow-lg border-2 border-primary
             bg-secondary-dark
             hover:shadow-[0px_0px_9px_3px_var(--color-primary-shadow)]
@@ -44,9 +44,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               Visitar
             </button>
           </a>
-          <a href={project.github}>
+          <a href={project.github} className="w-full sm:w-auto">
             <button
-              className="group py-2 px-10 mt-5 p-2 text-primary w-full 
+              className="group flex w-full justify-center px-8 py-2 text-primary 
               uppercase font-bold shadow-lg border-2 border-primary
             bg-white hover:shadow-[0px_0px_9px_3px_var(--color-primary-shadow)]
             transition-all duration-500

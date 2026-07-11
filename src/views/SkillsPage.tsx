@@ -3,13 +3,13 @@ import { logos } from "../data";
 export default function SkillsPage() {
   return (
     <>
-      <div className="container flex flex-col lg:flex-row lg:justify-between gap-15 items-center">
-        <div className="relative mt-10 mb-5">
+      <div className="flex flex-col items-center gap-12 lg:flex-row lg:justify-between lg:gap-15 2xl:gap-24">
+        <div className="relative mb-5 mt-4 w-full lg:mt-10 lg:max-w-2xl 2xl:max-w-3xl">
           <div className="relative isolate z-10 mb-10 lg:mb-5">
             <div className="pointer-events-none absolute inset-0 translate-x-3 translate-y-3 border-y-2 border-black bg-black lg:border-2 lg:rounded-4xl" />
 
-            <div className="relative z-10 flex min-h-52 flex-col justify-center animate-fade animate-duration-1200 animate-ease-in border-y-2 border-black bg-white p-4 lg:border-2 lg:rounded-4xl">
-              <p className="mt-2 text-lg">
+            <div className="relative z-10 flex min-h-52 flex-col justify-center animate-fade animate-duration-1200 animate-ease-in border-y-2 border-black bg-white p-5 lg:border-2 lg:rounded-4xl 2xl:p-8">
+              <p className="mt-2 text-base leading-relaxed sm:text-lg 2xl:text-xl">
                 Mi stack está orientado a crear soluciones completas, desde el
                 <span className="font-bold">
                   {""} desarrollo de aplicaciones web
@@ -44,43 +44,42 @@ export default function SkillsPage() {
           </div>
         </div>
 
-        <div className="p-4 rounded-xl">
-          <h2 className="relative text-5xl font-bold text-center mb-15">
+        <div className="w-full rounded-xl p-0 sm:p-4 lg:max-w-4xl 2xl:max-w-5xl">
+          <h2 className="relative mb-12 text-center text-4xl font-bold sm:mb-15 sm:text-5xl 2xl:text-6xl">
             Tecnologías
-            <span className="animate-grow-underline absolute left-1/2 -translate-x-1/2 bottom-[-8px] w-70 h-1 bg-primary"></span>
+            <span className="animate-grow-underline absolute bottom-[-8px] left-1/2 h-1 w-48 -translate-x-1/2 bg-primary sm:w-70"></span>
           </h2>
 
-          <div className="animate-fade-left animate-duration-2000  lg:flex items-center gap-10 mb-2">
-            <h2 className="text-2xl mb-4 text-primary font-bold">
+          <div className="animate-fade-left animate-duration-2000 mb-2 items-center gap-10 lg:flex">
+            <h2 className="mb-4 text-center text-xl font-bold text-primary sm:text-2xl lg:min-w-52 lg:text-left 2xl:text-3xl">
               DESARROLLO WEB
             </h2>
 
-            <div className="border-black border-2 overflow-hidden w-full max-w-2xl bg-surface p-5 rounded-lg">
+            <div className="w-full overflow-hidden rounded-lg border-2 border-black bg-surface p-3 sm:p-5 lg:max-w-2xl 2xl:max-w-3xl">
               <div className="relative">
                 <div className="flex w-max animate-scroll-backend">
-                  {/* Duplicamos las imágenes para efecto de carrusel infinito */}
                   {[...logos["web"], ...logos["web"]].map((logo, index) => (
                     <img
                       key={index}
                       src={logo}
                       alt={`Logo de ${logo}`}
-                      className="w-22 h-25 mx-4"
+                      className="mx-3 h-18 w-18 sm:mx-4 sm:h-25 sm:w-22 2xl:h-28 2xl:w-25"
                     />
                   ))}
                 </div>
               </div>
             </div>
           </div>
-          <p className="mb-10 font-bold text-center text-lg">
+          <p className="mb-10 text-center text-base font-bold sm:text-lg 2xl:text-xl">
             Principal:{" "}
             <span className="text-primary">Python, Django, React</span>
           </p>
 
-          <div className="animate-fade-left animate-duration-2000 lg:flex items-center gap-10 mb-2">
-            <h2 className="text-2xl mb-4 rounded-lg text-primary font-bold text-center">
+          <div className="animate-fade-left animate-duration-2000 mb-2 items-center gap-10 lg:flex">
+            <h2 className="mb-4 rounded-lg text-center text-xl font-bold text-primary sm:text-2xl lg:min-w-52 lg:text-left 2xl:text-3xl">
               AUTOMATIZACIÓN + IA
             </h2>
-            <div className="border-black border-2 overflow-hidden w-full max-w-2xl bg-surface p-5 rounded-lg">
+            <div className="w-full overflow-hidden rounded-lg border-2 border-black bg-surface p-3 sm:p-5 lg:max-w-2xl 2xl:max-w-3xl">
               <div className="relative">
                 <div className="flex w-max animate-scroll-frontend">
                   {[...logos["automation"], ...logos["automation"]].map(
@@ -89,7 +88,7 @@ export default function SkillsPage() {
                         key={index}
                         src={logo}
                         alt={`Logo de ${logo}`}
-                        className="w-22 h-25 mx-4"
+                        className="mx-3 h-18 w-18 sm:mx-4 sm:h-25 sm:w-22 2xl:h-28 2xl:w-25"
                       />
                     ),
                   )}
@@ -97,7 +96,7 @@ export default function SkillsPage() {
               </div>
             </div>
           </div>
-          <p className="font-bold text-center text-lg">
+          <p className="text-center text-base font-bold sm:text-lg 2xl:text-xl">
             Principal:{" "}
             <span className="text-primary">Python, n8n, Codex, IA Skills</span>
           </p>

@@ -3,11 +3,13 @@ import Form from "../components/Form";
 export default function ContactPage() {
   return (
     <>
-      <div className="container flex flex-col items-center justify-center mt-5">
+      <div className="mt-5 flex flex-col items-center justify-center">
         <Form />
 
-        <h1 className="text-5xl mt-10 font-bold">Mis Redes</h1>
-        <div className="flex justify-around xl:w-1/4 gap-5 mt-5 px-8 py-3 bg-surface rounded mb-5">
+        <h1 className="mt-10 text-4xl font-bold sm:text-5xl 2xl:text-6xl">
+          Mis Redes
+        </h1>
+        <div className="mb-5 mt-5 flex w-full max-w-xs justify-around gap-5 rounded bg-surface px-8 py-3 sm:max-w-sm xl:max-w-md">
           <a
             href="https://github.com/MarcosBruur"
             target="_blank"

@@ -5,32 +5,34 @@ import { motion } from "framer-motion";
 export default function HomePage() {
   return (
     <>
-      <div className="flex justify-between">
+      <div className="flex flex-col justify-between gap-10 lg:flex-row 2xl:gap-16">
         <div className="w-full lg:w-7/8">
           <div className="flex-row space-y-2">
-            <p className="text-4xl text-start text-primary">
+            <p className="text-2xl text-start text-primary sm:text-4xl 2xl:text-5xl">
               Hola, Mi nombre es
             </p>
             <p
-              className="lg:text-start text-7xl font-bold 
+              className="text-4xl font-bold sm:text-6xl lg:text-start lg:text-7xl 2xl:text-8xl
             text-white"
             >
-              <span className="hero-highlight inline-block whitespace-nowrap px-4 py-2">
+              <span className="hero-highlight inline-block max-w-full px-3 py-2 sm:px-4">
                 Marcos Bruno
               </span>
             </p>
 
-            <p className="text-primary text-4xl text-start ml-4">y soy</p>
+            <p className="ml-2 text-start text-2xl text-primary sm:ml-4 sm:text-4xl 2xl:text-5xl">
+              y soy
+            </p>
 
-            <p className="text-6xl text-white font-bold">
-              <span className="hero-highlight hero-highlight-reverse inline-block whitespace-nowrap px-4 py-2">
+            <p className="text-4xl font-bold text-white sm:text-5xl lg:text-6xl 2xl:text-7xl">
+              <span className="hero-highlight hero-highlight-reverse inline-block max-w-full px-3 py-2 sm:px-4">
                 Desarrollador FullStack
               </span>
             </p>
           </div>
 
           <motion.div
-            className="w-full text-start mt-30 rounded-xl bg-card p-12"
+            className="mt-16 w-full rounded-xl bg-card p-5 text-start sm:p-8 lg:mt-30 lg:p-12 2xl:p-14"
             initial={{ opacity: 0, x: -80 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
@@ -44,12 +46,12 @@ export default function HomePage() {
                   className="size-15"
                 />
               </div>
-              <h3 className="text-4xl font-bold text-white">
+              <h3 className="text-3xl font-bold text-white sm:text-4xl 2xl:text-5xl">
                 <span className="mr-1">#</span>
                 Sobre Mí
               </h3>
             </div>
-            <p className="text-xl mt-6 text-bg">
+            <p className="mt-6 text-lg leading-relaxed text-bg sm:text-xl 2xl:text-2xl">
               Soy desarrollador fullstack con un perfil orientado principalmente
               al backend, la automatización de procesos y la creación de
               soluciones apoyadas en inteligencia artificial. Me enfoco en
@@ -63,17 +65,17 @@ export default function HomePage() {
           </motion.div>
         </div>
 
-        <div className="hidden lg:w-full lg:flex lg:justify-end">
-          <div className="animate-fade-left animate-duration-1000 w-3/4">
+        <div className="hidden lg:flex lg:w-full lg:justify-end">
+          <div className="animate-fade-left animate-duration-1000 w-3/4 2xl:w-2/3">
             <img
               src="https://res.cloudinary.com/dbjyf3qb3/image/upload/v1773529101/marcos1_qlzdhh.webp"
               alt="Imagen marcos"
-              className="shadow object-contain  w-full h-[500px]"
+              className="h-[500px] w-full object-contain shadow 2xl:h-[620px]"
             />
 
             <div className="w-full flex flex-col items-center">
               <div
-                className="flex justify-around w-1/2 
+                className="flex justify-around w-1/2 2xl:w-2/5
               gap-2 mt-2 px-8 py-3 bg-surface rounded"
               >
                 <a
@@ -128,10 +130,10 @@ export default function HomePage() {
                   </svg>
                 </a>
               </div>
-              <div className="w-1/2">
+              <div className="w-1/2 2xl:w-2/5">
                 <Link to={"/contact"}>
                   <button
-                    className="text-white w-full text-center text-xl p-2 
+                    className="text-white w-full text-center text-xl 2xl:text-2xl p-2 
                 mt-2 bg-secondary-dark uppercase 
                 font-bold shadow-lg hover:cursor-pointer
                 hover:shadow-[0px_0px_9px_3px_var(--color-primary-shadow)]
@@ -149,11 +151,11 @@ export default function HomePage() {
 
       <div className="flex justify-between items-center">
         <div>
-          <h2 className="text-black text-7xl mt-40 lg:mt-55 font-black mb-30 ">
+          <h2 className="mb-16 mt-24 text-4xl font-black text-black sm:text-6xl lg:mb-30 lg:mt-55 lg:text-7xl 2xl:text-8xl">
             Mis Habilidades
           </h2>
 
-          <div className="relative mt-10 mb-5 lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:gap-x-28 lg:gap-y-20">
+          <div className="relative mt-10 mb-5 lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:gap-x-28 lg:gap-y-20 2xl:gap-x-36 2xl:gap-y-24">
             <div className="pointer-events-none absolute inset-0 z-0 hidden lg:block">
               <motion.div
                 className="absolute left-1/2 top-[24%] h-2 w-28 -translate-x-1/2 bg-secondary origin-left"

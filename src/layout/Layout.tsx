@@ -8,6 +8,7 @@ export default function Layout() {
     <>
       <div
         className="
+        min-h-screen
         bg-bg-light
       dark:bg-bg 
       dark:text-text
@@ -16,7 +17,7 @@ export default function Layout() {
         <ScrollToTop />
         <div>
           <Header />
-          <main className="container md:mx-auto md:py-16 md:gap-20  md:mt-0">
+          <main className="mx-auto w-full max-w-[1720px] px-4 py-10 sm:px-6 md:px-8 md:py-16 2xl:px-10 2xl:py-20">
             <Outlet />
           </main>
           <Footer />
