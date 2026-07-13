@@ -45,6 +45,15 @@ export default function Form() {
 
     const resp = await SendEmail(field.email, field.message);
 
+    if (!resp.success) {
+      setNotification({
+        show: true,
+        isError: true,
+        message: resp.error ?? "Error inesperado, vuelve a intentar mas tarde",
+      });
+      return;
+    }
+
     setField({
       email: "",
       message: "",

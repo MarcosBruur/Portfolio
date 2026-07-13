@@ -8,7 +8,7 @@ export function useInView(options = { threshold: 0.2 }) {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setIsVisible(true);
-        observer.disconnect(); // 👈 se anima solo una vez
+        observer.disconnect();
       }
     }, options);
 

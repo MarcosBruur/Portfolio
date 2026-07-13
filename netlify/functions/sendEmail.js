@@ -2,6 +2,13 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+const getErrorMessage = (error) => {
+  if (!error) return "Unknown error";
+  if (typeof error === "string") return error;
+  if (error.message) return error.message;
+  return JSON.stringify(error);
+};
+
 export const handler = async (event) => {
   try {
     if (event.httpMethod !== "POST") {
@@ -40,7 +47,11 @@ export const handler = async (event) => {
     if (error) {
       return {
         statusCode: 400,
-        body: JSON.stringify({ success: false, error: error.message }),
+        body: JSON.stringify({
+          success: false,
+          error: getErrorMessage(error),
+          details: error,
+        }),
       };
     }
 
@@ -51,7 +62,7 @@ export const handler = async (event) => {
   } catch (error) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ success: false, error: error.message }),
+      body: JSON.stringify({ success: false, error: getErrorMessage(error) }),
     };
   }
 };
