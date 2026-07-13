@@ -1,9 +1,34 @@
-const { Resend } = require("resend");
+import { Resend } from "resend";
+
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-exports.handler = async (event) => {
+export const handler = async (event) => {
   try {
+    if (event.httpMethod !== "POST") {
+      return {
+        statusCode: 405,
+        body: JSON.stringify({ success: false, error: "Method not allowed" }),
+      };
+    }
+
+    if (!process.env.RESEND_API_KEY) {
+      return {
+        statusCode: 500,
+        body: JSON.stringify({
+          success: false,
+          error: "RESEND_API_KEY is not configured",
+        }),
+      };
+    }
+
     const { to, subject, html } = JSON.parse(event.body);
+
+    if (!to || !subject || !html) {
+      return {
+        statusCode: 400,
+        body: JSON.stringify({ success: false, error: "Missing email data" }),
+      };
+    }
 
     const data = await resend.emails.send({
       from: "onboarding@resend.dev",
