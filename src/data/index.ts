@@ -65,7 +65,7 @@ export const projects: ProjectType[] = [
   {
     img: "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772562051/buscadorbebidas_daccvq.webp",
     title: "Buscador de Bebidas",
-    desc: "App que permite buscar recetas de cualquier tipo de bebida, con apartado de buscar con IA incluid. Tecnologias empleadas: React,Ts,Tailwind",
+    desc: "App que permite buscar recetas de cualquier tipo de bebida, con apartado de buscar con IA incluido. Tecnologias empleadas: React,Ts,Tailwind",
     url: "https://mbubebidas.netlify.app/",
     github: "https://github.com/MarcosBruur/buscador-de-bebidas",
   },
@@ -75,26 +75,5 @@ export const projects: ProjectType[] = [
     desc: "Una app que permite administrar las calorias gastadas en un dia, proximamente se agregará IA. Tecnologias empleadas: React,Ts",
     url: "https://mbrucalories.netlify.app/",
     github: "https://github.com/MarcosBruur/Contador-de-calorias",
-  },
-  {
-    img: "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772562037/cotizador_i9k0iq.webp",
-    title: "Cotizador de Cryptomonedas",
-    desc: "Web que permite visualizar en tiempo real el valor de mercado de las criptomonedas más importantes. Tecnologias empleadas: React,Ts,Tailwind",
-    url: "https://mbucotizador.netlify.app/",
-    github: "https://github.com/MarcosBruur/Cotizador-de-Cryptomonedas",
-  },
-  {
-    img: "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772562031/guitarla_rekkwn.webp",
-    title: "Carrito de compra",
-    desc: "Web simple que implementa un carrito de compras. Tecnologias empleadas: React,Ts",
-    url: "https://mbuguitar.netlify.app/",
-    github: "https://github.com/MarcosBruur/GuitarLa",
-  },
-  {
-    img: "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772562027/planificadorgastos_fuywcl.webp",
-    title: "Planificador de gastos",
-    desc: "App para planificar gastos a traves de un monto. Tecnologias empleadas: React,Ts,Tailwind",
-    url: "https://mbuplanificadorgastos.netlify.app/",
-    github: "https://github.com/MarcosBruur/Control-de-gastos-Web",
   },
 ];
