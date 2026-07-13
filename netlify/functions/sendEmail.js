@@ -30,12 +30,19 @@ export const handler = async (event) => {
       };
     }
 
-    const data = await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: "onboarding@resend.dev",
       to,
       subject,
       html,
     });
+
+    if (error) {
+      return {
+        statusCode: 400,
+        body: JSON.stringify({ success: false, error: error.message }),
+      };
+    }
 
     return {
       statusCode: 200,
