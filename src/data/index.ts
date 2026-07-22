@@ -70,13 +70,6 @@ export const projects: ProjectType[] = [
     github: "https://github.com/MarcosBruur/buscador-de-bebidas",
   },
   {
-    img: "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772562041/contadorcalorias_zwola8.webp",
-    title: "Contador de calorias",
-    desc: "Una app que permite administrar las calorias gastadas en un dia, proximamente se agregará IA. Tecnologias empleadas: React,Ts",
-    url: "https://mbrucalories.netlify.app/",
-    github: "https://github.com/MarcosBruur/Contador-de-calorias",
-  },
-  {
     img: "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1784759151/Screenshot_2026-07-22_192412_xqgc6t.webp",
     title: "Pulsostudio",
     desc: "Una web de ventas de productos de decoracion del hogar, con carrito de compras y pasarela de pagos integrando MercadoPago",
