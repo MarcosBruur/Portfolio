@@ -76,4 +76,11 @@ export const projects: ProjectType[] = [
     url: "https://mbrucalories.netlify.app/",
     github: "https://github.com/MarcosBruur/Contador-de-calorias",
   },
+  {
+    img: "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1784759151/Screenshot_2026-07-22_192412_xqgc6t.webp",
+    title: "Pulsostudio",
+    desc: "Una web de ventas de productos de decoracion del hogar, con carrito de compras y pasarela de pagos integrando MercadoPago",
+    url: "https://pulsoestudio.com.ar/",
+    github: "https://github.com/MarcosBruur/pulsostudio",
+  },
 ];
