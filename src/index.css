@@ -38,7 +38,7 @@ body {
 @theme {
   --animate-gradient: gradientMove 5s linear infinite;
   --font-pixel: "Geist Pixel", monospace;
-  --color-bg: #f3e600;
+  --color-bg: #90ab8b;
   --color-bg-light: #e5e7eb;
   --color-bg-dark: #0e121a;
   --color-card: #1a1b22;
