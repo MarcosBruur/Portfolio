@@ -1,0 +1,1 @@
+module.exports = require('./Proyectos/Portfolio/netlify/functions/sendEmail.js')

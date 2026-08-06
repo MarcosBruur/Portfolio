@@ -1,0 +1,21 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "Córdoba",
+			"country": {
+				"code": "AR",
+				"name": "Argentina"
+			},
+			"subdivision": {
+				"code": "X",
+				"name": "Cordoba"
+			},
+			"timezone": "America/Argentina/Cordoba",
+			"latitude": -31.4057,
+			"longitude": -64.1855,
+			"postalCode": "5008"
+		},
+		"timestamp": 1785116413552
+	},
+	"dbConnectionString": "postgres://localhost:55600/postgres"
+}

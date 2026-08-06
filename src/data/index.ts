@@ -63,11 +63,11 @@ export const projects: ProjectType[] = [
     github: "https://github.com/MarcosBruur/StreetUp",
   },
   {
-    img: "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1772562051/buscadorbebidas_daccvq.webp",
-    title: "Buscador de Bebidas",
-    desc: "App que permite buscar recetas de cualquier tipo de bebida, con apartado de buscar con IA incluido. Tecnologias empleadas: React,Ts,Tailwind",
-    url: "https://mbubebidas.netlify.app/",
-    github: "https://github.com/MarcosBruur/buscador-de-bebidas",
+    img: "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1785980474/Screenshot_2026-08-05_223947_ln3nbr.webp",
+    title: "ApuntaApp",
+    desc: "Una app para controlar horarios pensada para estudiantes. Tiene incluido un agente llamado Tempo que ayuda al estudiante a organizar sus tareas",
+    url: "https://apuntapp.netlify.app/",
+    github: "https://github.com/MarcosBruur/ApuntaApp",
   },
   {
     img: "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1784759151/Screenshot_2026-07-22_192412_xqgc6t.webp",
