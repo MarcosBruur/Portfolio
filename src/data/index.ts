@@ -76,4 +76,10 @@ export const projects: ProjectType[] = [
     url: "https://pulsoestudio.com.ar/",
     github: "https://github.com/MarcosBruur/pulsostudio",
   },
+  {
+    img: "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1787062673/Screenshot_2026-08-18_111331_lnw2tf.webp",
+    title: "ChatInteligente",
+    desc: "Un agente de IA con memoria de corto y largo plazo, gestion de usuarios e hilos de conversación. Tecnologias: Python, FastAPI, Langchain, React",
+    github: "https://github.com/MarcosBruur/pulsostudio",
+  },
 ];

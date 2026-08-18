@@ -16,7 +16,7 @@ export type ProjectType = {
   img: string;
   title: string;
   desc: string;
-  url: string;
+  url?: string;
   github: string;
 };
 

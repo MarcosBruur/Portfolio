@@ -37,24 +37,33 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.desc}
         </p>
 
-        <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-around">
-          <a
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto"
-          >
-            <button
-              className="w-full px-8 py-2 text-white uppercase 
+        <div
+          className={
+            project.url
+              ? "flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-around"
+              : "flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center"
+          }
+        >
+          {project.url ? (
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
+            >
+              <button
+                className="w-full px-8 py-2 text-white uppercase 
             font-bold shadow-lg border-2 border-primary
             bg-secondary-dark
             hover:shadow-[0px_0px_9px_3px_var(--color-primary-shadow)]
             transition-all duration-500
             "
-            >
-              Visitar
-            </button>
-          </a>
+              >
+                Visitar
+              </button>
+            </a>
+          ) : null}
+
           <a
             href={project.github}
             target="_blank"
