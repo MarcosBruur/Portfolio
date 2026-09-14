@@ -82,4 +82,10 @@ export const projects: ProjectType[] = [
     desc: "Un agente de IA con memoria de corto y largo plazo, gestion de usuarios e hilos de conversación. Tecnologias: Python, FastAPI, Langchain, React",
     github: "https://github.com/MarcosBruur/pulsostudio",
   },
+  {
+    img: "https://res.cloudinary.com/dbjyf3qb3/image/upload/v1789415289/Screenshot_2026-09-14_164557_juss0g.webp",
+    title: "Sistema de facturación y control de stock multi tenant",
+    desc: "Un sistema integral para gestionar comercios enteros, desde la generacion de ventas, medios de pago, cobros, emision de tickets, vinculacion con ARCA. Tambien cuenta con un sistema de control para administradores, con toda la informacion del negocio disponible y graficos para tomar decisiones",
+    github: "https://github.com/MarcosBruur/TPV",
+  },
 ];
