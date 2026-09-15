@@ -1,12 +1,15 @@
+import { useLocation } from "react-router-dom";
+
 export default function Footer() {
+  const location = useLocation();
+  const language = location.pathname === "/skills" ? "TS" : location.pathname === "/projects" ? "JSON" : location.pathname === "/trajectory" ? "LOG" : location.pathname === "/contact" ? "SH" : "MD";
+
   return (
-    <footer>
-      <div className="mx-auto mt-20 flex w-full max-w-[1720px] flex-col items-center justify-center gap-2 px-4 pb-8 sm:mt-30 sm:flex-row">
-        <img src="banana.gif" alt="" className="size-16 sm:size-20" />
-        <h4 className="text-center text-sm sm:text-base 2xl:text-lg">
-          Marcos Bruno. Todos los derechos reservados.
-        </h4>
-        <img src="banana.gif" alt="" className="size-16 sm:size-20" />
+    <footer className="border-t border-border bg-secondary-deep text-xs text-secondary-text">
+      <div className="mx-auto flex h-9 w-full max-w-[1800px] items-center justify-between px-4 sm:px-6">
+        <span><span className="text-primary">◆</span> main</span>
+        <span className="hidden sm:inline">Marcos Bruno · portfolio workspace</span>
+        <span>{language} · UTF-8</span>
       </div>
     </footer>
   );

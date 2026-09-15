@@ -1,83 +1,25 @@
-import { Fragment, useMemo } from "react";
+import { Fragment, useEffect } from "react";
 import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/24/outline";
 import { XMarkIcon } from "@heroicons/react/20/solid";
 import { Transition } from "@headlessui/react";
 import type { NotificationType } from "../types";
 
-type NotificationProps = {
-  notification: NotificationType;
-  setNotification: React.Dispatch<React.SetStateAction<NotificationType>>;
-};
+type NotificationProps = { notification: NotificationType; setNotification: React.Dispatch<React.SetStateAction<NotificationType>> };
 
-export default function Notification({
-  notification,
-  setNotification,
-}: NotificationProps) {
-  useMemo(() => {
-    setTimeout(() => {
-      setNotification({
-        ...notification,
-        show: false,
-      });
-    }, 8000);
-  }, [notification]);
+export default function Notification({ notification, setNotification }: NotificationProps) {
+  useEffect(() => {
+    if (!notification.show) return;
+    const timeout = window.setTimeout(() => setNotification((current) => ({ ...current, show: false })), 8000);
+    return () => window.clearTimeout(timeout);
+  }, [notification.show, setNotification]);
 
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    e.preventDefault();
-    setNotification({
-      ...notification,
-      show: false,
-    });
-  };
-
-  return (
-    <div
-      aria-live="assertive"
-      className="pointer-events-none fixed inset-0 flex items-end px-4 py-6 sm:items-start sm:p-6"
-    >
-      <div className="flex w-full flex-col items-center space-y-4 sm:items-end">
-        <Transition
-          show={notification.show}
-          as={Fragment}
-          enter="transform ease-out duration-300 transition"
-          enterFrom="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
-          enterTo="translate-y-0 opacity-100 sm:translate-x-0"
-          leave="transition ease-in duration-100"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-        >
-          <div className="pointer-events-auto w-full max-w-sm overflow-hidden rounded-lg bg-surface shadow-lg ring-1 ring-black ring-opacity-5">
-            <div className="p-4">
-              <div className="flex justify-around items-center">
-                <div className="flex-shrink-0">
-                  {notification.isError ? (
-                    <XCircleIcon className="size-10 text-red-600" />
-                  ) : (
-                    <CheckCircleIcon className="size-10 text-green-600" />
-                  )}
-                </div>
-                <div className="ml-3 w-0 flex-1 pt-0.5">
-                  <p className="text-sm font-black text-text-strong ">
-                    {notification.message}
-                  </p>
-                  <p className="mt-1 text-sm text-text-soft"></p>
-                </div>
-
-                <div className="ml-4 flex flex-shrink-0">
-                  <button
-                    type="button"
-                    className="inline-flex rounded-md bg-surface text-text-soft hover:text-text-strong focus:outline-none focus:ring-2 focus:ring-secondary-active focus:ring-offset-2"
-                    onClick={handleClick}
-                  >
-                    <span className="sr-only">Cerrar</span>
-                    <XMarkIcon className="h-5 w-5" aria-hidden="true" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Transition>
+  return <div aria-live="assertive" className="pointer-events-none fixed inset-0 z-[110] flex items-end px-4 py-6 sm:items-start sm:p-6"><div className="flex w-full flex-col items-center sm:items-end">
+    <Transition show={notification.show} as={Fragment} enter="transform ease-out duration-300 transition" enterFrom="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2" enterTo="translate-y-0 opacity-100 sm:translate-x-0" leave="transition ease-in duration-100" leaveFrom="opacity-100" leaveTo="opacity-0">
+      <div className="pointer-events-auto flex w-full max-w-sm items-center gap-3 border border-border bg-card p-4 shadow-2xl">
+        {notification.isError ? <XCircleIcon className="size-7 shrink-0 text-red-400" /> : <CheckCircleIcon className="size-7 shrink-0 text-primary" />}
+        <p className="flex-1 text-sm text-text-muted">{notification.message}</p>
+        <button type="button" className="text-text-soft hover:text-primary" onClick={() => setNotification((current) => ({ ...current, show: false }))}><span className="sr-only">Cerrar</span><XMarkIcon className="size-5" /></button>
       </div>
-    </div>
-  );
+    </Transition>
+  </div></div>;
 }

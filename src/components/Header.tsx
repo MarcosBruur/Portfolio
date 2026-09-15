@@ -1,112 +1,41 @@
-import {
-  Bars3Icon,
-  MoonIcon,
-  SunIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { Bars3Icon, CodeBracketIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
+
+const navigation = [
+  { to: "/", label: "about-me.md" },
+  { to: "/skills", label: "skills.ts" },
+  { to: "/projects", label: "projects.json" },
+  { to: "/trajectory", label: "trajectory.log" },
+  { to: "/contact", label: "contact.sh" },
+];
 
 export default function Header() {
-  const [darkMode, setDarkMode] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const navLinkBase =
-    "relative isolate block w-full overflow-hidden px-4 py-3 uppercase text-xl transition-colors duration-300 before:absolute before:inset-x-0 before:top-0 before:-z-10 before:h-full before:origin-top before:scale-y-0 before:bg-card before:transition-transform before:duration-300 before:ease-out sm:text-2xl lg:w-auto 2xl:text-3xl";
-
   const navLinkClass = ({ isActive }: { isActive: boolean }) =>
-    `${navLinkBase} ${
-      isActive
-        ? "bg-card text-bg before:scale-y-100"
-        : "text-black hover:text-bg hover:before:scale-y-100"
-    }`;
-
-  const toggleDarkMode = () => {
-    if (darkMode) {
-      document.documentElement.classList.remove("dark");
-    } else {
-      document.documentElement.classList.add("dark");
-    }
-
-    setDarkMode(!darkMode);
-  };
-
-  const ThemeToggle = ({ className = "" }: { className?: string }) => (
-    <button
-      onClick={toggleDarkMode}
-      aria-label="Cambiar tema"
-      className={`h-12 w-24 justify-between rounded-lg bg-card p-1 lg:w-25 ${className}`}
-    >
-      <div
-        className={`${darkMode ? "translate-x-12 lg:translate-x-13" : ""} size-10 bg-surface/20
-              flex items-center justify-center rounded-lg transition-all duration-500 ease-in-out hover:cursor-pointer
-              ${!darkMode ? "bg-surface/40" : ""} `}
-      >
-        {!darkMode ? (
-          <SunIcon className="size-7 text-text" />
-        ) : (
-          <MoonIcon className="size-7 text-text-muted" />
-        )}
-      </div>
-    </button>
-  );
+    `block border-l-2 px-4 py-3 text-left text-sm uppercase tracking-wider transition-colors ${isActive ? "border-primary bg-card text-primary" : "border-transparent text-text-muted hover:border-blue hover:bg-card-muted hover:text-text"}`;
 
   return (
-    <header className="sticky left-0 top-0 z-50 border-b-3 border-black bg-bg-light/90 backdrop-blur-sm dark:bg-bg/90">
-      <div className="mx-auto flex w-full max-w-[1720px] flex-col px-4 py-3 sm:px-6 lg:px-8 lg:py-4 2xl:px-10">
-        <div className="flex items-center justify-between lg:hidden">
-          <button
-            onClick={() => setIsMenuOpen((current) => !current)}
-            aria-label={isMenuOpen ? "Cerrar menu" : "Abrir menu"}
-            aria-expanded={isMenuOpen}
-            className="flex size-12 items-center justify-center rounded-lg border-2 border-black bg-surface text-primary shadow"
-          >
-            {isMenuOpen ? (
-              <XMarkIcon className="size-8" />
-            ) : (
-              <Bars3Icon className="size-8" />
-            )}
-          </button>
-
-          <ThemeToggle className="flex" />
+    <header className="sticky top-0 z-50 border-b border-border bg-bg-dark/95 backdrop-blur">
+      <div className="flex h-12 items-center justify-between px-4 sm:px-6">
+        <div className="flex items-center gap-3 text-xs text-text-muted">
+          <CodeBracketIcon className="size-5 text-primary" />
+          <span className="hidden sm:inline">marcos@portfolio</span>
+          <span className="text-blue">~/workspace</span>
         </div>
-
-        <div
-          className={`${isMenuOpen ? "flex" : "hidden"} flex-col items-center gap-3 pt-4 lg:flex lg:flex-row lg:justify-between lg:pt-0`}
-        >
-          <nav className="flex w-full flex-col items-center text-center lg:mr-20 lg:w-auto lg:flex-row lg:gap-8">
-            <NavLink
-              to="/"
-              className={navLinkClass}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Sobre Mi
-            </NavLink>
-
-            <NavLink
-              to="/skills"
-              className={navLinkClass}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Tec
-            </NavLink>
-            <NavLink
-              to="/projects"
-              className={navLinkClass}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Proyectos
-            </NavLink>
-            <NavLink
-              to="/contact"
-              className={navLinkClass}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contáctame
-            </NavLink>
+        <div className="hidden text-xs text-text-soft lg:block">Visual Studio Code</div>
+        <div className="flex items-center gap-3 text-text-muted">
+          <button onClick={() => setIsMenuOpen((current) => !current)} aria-label={isMenuOpen ? "Cerrar menu" : "Abrir menu"} aria-expanded={isMenuOpen} className="flex size-8 items-center justify-center border border-border bg-surface lg:hidden">
+            {isMenuOpen ? <XMarkIcon className="size-5" /> : <Bars3Icon className="size-5" />}
+          </button>
+          <span className="hidden text-xs lg:inline">_</span>
+          <span className="hidden text-xs lg:inline">□</span>
+          <span className="hidden text-xs text-primary lg:inline">×</span>
+        </div>
+        <div className={`${isMenuOpen ? "flex" : "hidden"} absolute left-0 top-12 w-full flex-col border-b border-border bg-bg-dark p-3 lg:hidden`}>
+          <nav className="flex w-full flex-col">
+            {navigation.map((item) => <NavLink key={item.to} to={item.to} className={navLinkClass} onClick={() => setIsMenuOpen(false)}>{item.label}</NavLink>)}
           </nav>
-
-          <ThemeToggle className="hidden lg:flex" />
         </div>
       </div>
     </header>

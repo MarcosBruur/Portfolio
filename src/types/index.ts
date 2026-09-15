@@ -20,6 +20,16 @@ export type ProjectType = {
   github: string;
 };
 
+export type ExperienceType = {
+  id: number;
+  role: string;
+  company: string;
+  period: string;
+  startDate: string;
+  description: string;
+  technologies: string[];
+};
+
 export type FieldType = {
   email: string;
   message: string;

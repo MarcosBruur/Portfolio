@@ -5,20 +5,17 @@ import { motion } from "framer-motion";
 export default function ProyectsPage() {
   return (
     <>
-      <div className="text-center">
-        <div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-5">
+      <div>
+        <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
           <img
             src="devgif.gif"
             alt=""
             className="size-24 sm:size-30 2xl:size-36"
           />
-          <h2 className="relative text-4xl font-bold sm:text-5xl 2xl:text-6xl">
-            Proyectos
-            <span className="animate-grow-underline absolute bottom-[-8px] left-1/2 h-1 w-44 -translate-x-1/2 bg-primary sm:w-56"></span>
-          </h2>
+          <div><p className="text-sm text-text-soft">// repositories</p><h1 className="text-4xl font-bold text-text sm:text-5xl">Proyectos</h1></div>
         </div>
         <motion.div
-          className="mt-14 grid gap-10 sm:grid-cols-2 lg:mt-20 lg:grid-cols-3 lg:gap-10 2xl:gap-14"
+          className="mt-10 grid gap-6 sm:grid-cols-2 lg:mt-14 lg:grid-cols-3 lg:gap-7"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
